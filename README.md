@@ -6,6 +6,9 @@ required:
 - Ganache
 - Metamask (Chrome extension)
 
+install truffle:
+npm install -g truffle
+
 install dependencies:
 npm install
 
