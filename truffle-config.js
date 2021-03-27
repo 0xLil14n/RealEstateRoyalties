@@ -2,7 +2,11 @@ require('babel-register');
 require('babel-polyfill');
 require('dotenv').config();
 const HDWalletProvider = require('truffle-hdwallet-provider-privkey');
-const privateKeys = [process.env.PRIVATE_KEY] || ""
+const privateKeys = [process.env.PRIVATE_KEY] || "";
+const KOVAN_RPC_URL = process.env.KOVAN_RPC_URL;
+const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL;
+const MAINNET_RPC_URL = process.env.MAINNET_RPC_URL;
+const ROPSTEN_RPC_URL = process.env.ROPSTEN_RPC_URL;
 
 module.exports = {
   networks: {
@@ -15,7 +19,7 @@ module.exports = {
       provider: function() {
         return new HDWalletProvider(
           privateKeys.split(','), // Array of account private keys
-          `https://kovan.infura.io/v3/${process.env.INFURA_API_KEY}`// Url to an Ethereum Node
+          KOVAN_RPC_URL
         )
       },
       gas: 5000000,
@@ -26,7 +30,7 @@ module.exports = {
       provider: function() {
         return new HDWalletProvider(
           privateKeys.split(','), // Array of account private keys
-          `https://main.infura.io/v3/${process.env.INFURA_API_KEY}`// Url to an Ethereum Node
+            MAINNET_RPC_URL
         )
       },
       gas: 5000000,
@@ -37,7 +41,7 @@ module.exports = {
       provider: function() {
         return new HDWalletProvider(
           privateKeys.split(','), // Array of account private keys
-          `https://rinkeby.infura.io/v3/${process.env.INFURA_API_KEY}`// Url to an Ethereum Node
+          RINKEBY_RPC_URL
         )
       },
       gas: 5000000,
@@ -48,7 +52,7 @@ module.exports = {
       provider: function() {
         return new HDWalletProvider(
           privateKeys.split(','), // Array of account private keys
-          `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`// Url to an Ethereum Node
+          ROPSTEN_RPC_URL
         )
       },
       gas: 5000000,
