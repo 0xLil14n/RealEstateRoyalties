@@ -2,7 +2,11 @@ require('babel-register');
 require('babel-polyfill');
 require('dotenv').config();
 const HDWalletProvider = require('truffle-hdwallet-provider-privkey');
-const privateKeys = [process.env.PRIVATE_KEY] || ""
+const privateKey = process.env.PRIVATE_KEY || "";
+const KOVAN_RPC_URL = process.env.KOVAN_RPC_URL;
+const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL;
+const MAINNET_RPC_URL = process.env.MAINNET_RPC_URL;
+const ROPSTEN_RPC_URL = process.env.ROPSTEN_RPC_URL;
 
 module.exports = {
   networks: {
@@ -14,8 +18,8 @@ module.exports = {
     kovan: {
       provider: function() {
         return new HDWalletProvider(
-          privateKeys.split(','), // Array of account private keys
-          `https://kovan.infura.io/v3/${process.env.INFURA_API_KEY}`// Url to an Ethereum Node
+          privateKey,
+          KOVAN_RPC_URL
         )
       },
       gas: 5000000,
@@ -25,8 +29,8 @@ module.exports = {
     main: {
       provider: function() {
         return new HDWalletProvider(
-          privateKeys.split(','), // Array of account private keys
-          `https://main.infura.io/v3/${process.env.INFURA_API_KEY}`// Url to an Ethereum Node
+          privateKey,
+            MAINNET_RPC_URL
         )
       },
       gas: 5000000,
@@ -36,8 +40,8 @@ module.exports = {
     rinkeby: {
       provider: function() {
         return new HDWalletProvider(
-          privateKeys.split(','), // Array of account private keys
-          `https://rinkeby.infura.io/v3/${process.env.INFURA_API_KEY}`// Url to an Ethereum Node
+          privateKey,
+          RINKEBY_RPC_URL
         )
       },
       gas: 5000000,
@@ -47,8 +51,8 @@ module.exports = {
     ropsten: {
       provider: function() {
         return new HDWalletProvider(
-          privateKeys.split(','), // Array of account private keys
-          `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`// Url to an Ethereum Node
+          privateKey,
+          ROPSTEN_RPC_URL
         )
       },
       gas: 5000000,
@@ -60,7 +64,7 @@ module.exports = {
   contracts_build_directory: './src/abis/',
   compilers: {
     solc: {
-      version: ">=0.6.0 <0.8.0",
+      version: '0.6.6',
       optimizer: {
         enabled: true,
         runs: 200
