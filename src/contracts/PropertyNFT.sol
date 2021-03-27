@@ -1,18 +1,17 @@
-pragma solidity >=0.6.0 <0.8.0;
+pragma solidity ^0.6.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
+
 import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 
-contract PropertyNFT is ERC721, VRFConsumerBase {
-    using Counters for Counters.Counter;
-    Counters.Counter private _tokenIds;
+abstract contract PropertyNFT is ERC721, VRFConsumerBase {
+
     mapping(bytes32 => string) requestToName;
     mapping(bytes32 => address) requestToSender;
 
     struct Location {
-        int256 latitude;
-        int256 longitude;
+        uint256 latitude;
+        uint256 longitude;// TODO make these signed integers
     }
     enum AssetType {
         TITLE,
@@ -40,7 +39,8 @@ contract PropertyNFT is ERC721, VRFConsumerBase {
         string landDescription;
         AssetType assetRecordType;
         Lease activeLease;
-        Lease[] leases;
+//        Lease[] leases;
+        string propertyAddress;
     }
-    Property[] public properties;
+    Property[] properties;
 }
