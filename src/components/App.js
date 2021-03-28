@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Web3 from 'web3';
 import './App.css';
 import Nav from './Nav.js';
+import Hero from './Hero.js';
 
 class App extends Component {
 
@@ -48,13 +49,7 @@ class App extends Component {
     return (
       <div className='text-monospace'>
         <Nav/>
-        <div className="container-fluid mt-5 text-center">
-        <br></br>
-          <h1 class="hero">Welcome to RealEstate Royalties</h1>
-          <h2>{this.state.account}</h2>
-          <br></br>
-            <a href="" class="button w-button">Mint Token</a>
-        </div>
+        <Hero/>
       </div>
     );
   }
