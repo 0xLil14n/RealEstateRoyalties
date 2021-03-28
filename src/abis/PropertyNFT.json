@@ -431,14 +431,14 @@
     "absolutePath": "/Users/lilian/Desktop/CryptoProj/RealEstateRoyalties/src/contracts/PropertyNFT.sol",
     "exportedSymbols": {
       "PropertyNFT": [
-        291
+        234
       ]
     },
-    "id": 292,
+    "id": 235,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 232,
+        "id": 175,
         "literals": [
           "solidity",
           "^",
@@ -446,27 +446,27 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:2"
+        "src": "0:23:1"
       },
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
         "file": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
-        "id": 233,
+        "id": 176,
         "nodeType": "ImportDirective",
-        "scope": 292,
-        "sourceUnit": 2066,
-        "src": "25:57:2",
+        "scope": 235,
+        "sourceUnit": 2009,
+        "src": "25:57:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
         "absolutePath": "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol",
         "file": "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol",
-        "id": 234,
+        "id": 177,
         "nodeType": "ImportDirective",
-        "scope": 292,
-        "sourceUnit": 415,
-        "src": "84:59:2",
+        "scope": 235,
+        "sourceUnit": 358,
+        "src": "84:59:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -477,78 +477,78 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 235,
+              "id": 178,
               "name": "ERC721",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2065,
-              "src": "178:6:2",
+              "referencedDeclaration": 2008,
+              "src": "178:6:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721_$2065",
+                "typeIdentifier": "t_contract$_ERC721_$2008",
                 "typeString": "contract ERC721"
               }
             },
-            "id": 236,
+            "id": 179,
             "nodeType": "InheritanceSpecifier",
-            "src": "178:6:2"
+            "src": "178:6:1"
           },
           {
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 237,
+              "id": 180,
               "name": "VRFConsumerBase",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 414,
-              "src": "186:15:2",
+              "referencedDeclaration": 357,
+              "src": "186:15:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_VRFConsumerBase_$414",
+                "typeIdentifier": "t_contract$_VRFConsumerBase_$357",
                 "typeString": "contract VRFConsumerBase"
               }
             },
-            "id": 238,
+            "id": 181,
             "nodeType": "InheritanceSpecifier",
-            "src": "186:15:2"
+            "src": "186:15:1"
           }
         ],
         "contractDependencies": [
-          414,
-          464,
-          754,
-          766,
-          2065,
-          2181,
-          2212,
-          2239,
-          2576
+          357,
+          407,
+          697,
+          709,
+          2008,
+          2124,
+          2155,
+          2182,
+          2519
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 291,
+        "id": 234,
         "linearizedBaseContracts": [
-          291,
-          414,
-          464,
-          2065,
-          2212,
-          2239,
-          2181,
-          754,
-          766,
-          2576
+          234,
+          357,
+          407,
+          2008,
+          2155,
+          2182,
+          2124,
+          697,
+          709,
+          2519
         ],
         "name": "PropertyNFT",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 242,
+            "id": 185,
             "mutability": "mutable",
             "name": "requestToName",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 291,
-            "src": "209:40:2",
+            "scope": 234,
+            "src": "209:40:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -556,28 +556,28 @@
               "typeString": "mapping(bytes32 => string)"
             },
             "typeName": {
-              "id": 241,
+              "id": 184,
               "keyType": {
-                "id": 239,
+                "id": 182,
                 "name": "bytes32",
                 "nodeType": "ElementaryTypeName",
-                "src": "217:7:2",
+                "src": "217:7:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_bytes32",
                   "typeString": "bytes32"
                 }
               },
               "nodeType": "Mapping",
-              "src": "209:26:2",
+              "src": "209:26:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_bytes32_$_t_string_storage_$",
                 "typeString": "mapping(bytes32 => string)"
               },
               "valueType": {
-                "id": 240,
+                "id": 183,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "228:6:2",
+                "src": "228:6:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
@@ -589,13 +589,13 @@
           },
           {
             "constant": false,
-            "id": 246,
+            "id": 189,
             "mutability": "mutable",
             "name": "requestToSender",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 291,
-            "src": "255:43:2",
+            "scope": 234,
+            "src": "255:43:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -603,28 +603,28 @@
               "typeString": "mapping(bytes32 => address)"
             },
             "typeName": {
-              "id": 245,
+              "id": 188,
               "keyType": {
-                "id": 243,
+                "id": 186,
                 "name": "bytes32",
                 "nodeType": "ElementaryTypeName",
-                "src": "263:7:2",
+                "src": "263:7:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_bytes32",
                   "typeString": "bytes32"
                 }
               },
               "nodeType": "Mapping",
-              "src": "255:27:2",
+              "src": "255:27:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
                 "typeString": "mapping(bytes32 => address)"
               },
               "valueType": {
-                "id": 244,
+                "id": 187,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "274:7:2",
+                "src": "274:7:1",
                 "stateMutability": "nonpayable",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
@@ -637,17 +637,17 @@
           },
           {
             "canonicalName": "PropertyNFT.Location",
-            "id": 251,
+            "id": 194,
             "members": [
               {
                 "constant": false,
-                "id": 248,
+                "id": 191,
                 "mutability": "mutable",
                 "name": "latitude",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 251,
-                "src": "331:16:2",
+                "scope": 194,
+                "src": "331:16:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -655,10 +655,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 247,
+                  "id": 190,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "331:7:2",
+                  "src": "331:7:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -669,13 +669,13 @@
               },
               {
                 "constant": false,
-                "id": 250,
+                "id": 193,
                 "mutability": "mutable",
                 "name": "longitude",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 251,
-                "src": "357:17:2",
+                "scope": 194,
+                "src": "357:17:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -683,10 +683,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 249,
+                  "id": 192,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "357:7:2",
+                  "src": "357:7:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -698,71 +698,71 @@
             ],
             "name": "Location",
             "nodeType": "StructDefinition",
-            "scope": 291,
-            "src": "305:110:2",
+            "scope": 234,
+            "src": "305:110:1",
             "visibility": "public"
           },
           {
             "canonicalName": "PropertyNFT.AssetType",
-            "id": 254,
+            "id": 197,
             "members": [
               {
-                "id": 252,
+                "id": 195,
                 "name": "TITLE",
                 "nodeType": "EnumValue",
-                "src": "445:5:2"
+                "src": "445:5:1"
               },
               {
-                "id": 253,
+                "id": 196,
                 "name": "OTHER",
                 "nodeType": "EnumValue",
-                "src": "460:5:2"
+                "src": "460:5:1"
               }
             ],
             "name": "AssetType",
             "nodeType": "EnumDefinition",
-            "src": "420:51:2"
+            "src": "420:51:1"
           },
           {
             "canonicalName": "PropertyNFT.LeaseTerm",
-            "id": 258,
+            "id": 201,
             "members": [
               {
-                "id": 255,
+                "id": 198,
                 "name": "T_12M",
                 "nodeType": "EnumValue",
-                "src": "500:5:2"
+                "src": "500:5:1"
               },
               {
-                "id": 256,
+                "id": 199,
                 "name": "T_24M",
                 "nodeType": "EnumValue",
-                "src": "515:5:2"
+                "src": "515:5:1"
               },
               {
-                "id": 257,
+                "id": 200,
                 "name": "T_6M",
                 "nodeType": "EnumValue",
-                "src": "530:4:2"
+                "src": "530:4:1"
               }
             ],
             "name": "LeaseTerm",
             "nodeType": "EnumDefinition",
-            "src": "476:64:2"
+            "src": "476:64:1"
           },
           {
             "canonicalName": "PropertyNFT.Lease",
-            "id": 269,
+            "id": 212,
             "members": [
               {
                 "constant": false,
-                "id": 260,
+                "id": 203,
                 "mutability": "mutable",
                 "name": "leaseeFirstName",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 269,
-                "src": "568:22:2",
+                "scope": 212,
+                "src": "568:22:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -770,10 +770,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 259,
+                  "id": 202,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "568:6:2",
+                  "src": "568:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -784,13 +784,13 @@
               },
               {
                 "constant": false,
-                "id": 262,
+                "id": 205,
                 "mutability": "mutable",
                 "name": "leaseeLastName",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 269,
-                "src": "600:21:2",
+                "scope": 212,
+                "src": "600:21:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -798,10 +798,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 261,
+                  "id": 204,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "600:6:2",
+                  "src": "600:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -812,28 +812,28 @@
               },
               {
                 "constant": false,
-                "id": 264,
+                "id": 207,
                 "mutability": "mutable",
                 "name": "leaseTerm",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 269,
-                "src": "631:19:2",
+                "scope": 212,
+                "src": "631:19:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_LeaseTerm_$258",
+                  "typeIdentifier": "t_enum$_LeaseTerm_$201",
                   "typeString": "enum PropertyNFT.LeaseTerm"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 263,
+                  "id": 206,
                   "name": "LeaseTerm",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 258,
-                  "src": "631:9:2",
+                  "referencedDeclaration": 201,
+                  "src": "631:9:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_LeaseTerm_$258",
+                    "typeIdentifier": "t_enum$_LeaseTerm_$201",
                     "typeString": "enum PropertyNFT.LeaseTerm"
                   }
                 },
@@ -842,28 +842,28 @@
               },
               {
                 "constant": false,
-                "id": 266,
+                "id": 209,
                 "mutability": "mutable",
                 "name": "startDateTimestamp",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 269,
-                "src": "660:23:2",
+                "scope": 212,
+                "src": "660:23:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Date_$276_storage_ptr",
+                  "typeIdentifier": "t_struct$_Date_$219_storage_ptr",
                   "typeString": "struct PropertyNFT.Date"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 265,
+                  "id": 208,
                   "name": "Date",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 276,
-                  "src": "660:4:2",
+                  "referencedDeclaration": 219,
+                  "src": "660:4:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Date_$276_storage_ptr",
+                    "typeIdentifier": "t_struct$_Date_$219_storage_ptr",
                     "typeString": "struct PropertyNFT.Date"
                   }
                 },
@@ -872,28 +872,28 @@
               },
               {
                 "constant": false,
-                "id": 268,
+                "id": 211,
                 "mutability": "mutable",
                 "name": "endDateTimestamp",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 269,
-                "src": "693:21:2",
+                "scope": 212,
+                "src": "693:21:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Date_$276_storage_ptr",
+                  "typeIdentifier": "t_struct$_Date_$219_storage_ptr",
                   "typeString": "struct PropertyNFT.Date"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 267,
+                  "id": 210,
                   "name": "Date",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 276,
-                  "src": "693:4:2",
+                  "referencedDeclaration": 219,
+                  "src": "693:4:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Date_$276_storage_ptr",
+                    "typeIdentifier": "t_struct$_Date_$219_storage_ptr",
                     "typeString": "struct PropertyNFT.Date"
                   }
                 },
@@ -903,23 +903,23 @@
             ],
             "name": "Lease",
             "nodeType": "StructDefinition",
-            "scope": 291,
-            "src": "545:176:2",
+            "scope": 234,
+            "src": "545:176:1",
             "visibility": "public"
           },
           {
             "canonicalName": "PropertyNFT.Date",
-            "id": 276,
+            "id": 219,
             "members": [
               {
                 "constant": false,
-                "id": 271,
+                "id": 214,
                 "mutability": "mutable",
                 "name": "month",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 276,
-                "src": "748:13:2",
+                "scope": 219,
+                "src": "748:13:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -927,10 +927,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 270,
+                  "id": 213,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "748:7:2",
+                  "src": "748:7:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -941,13 +941,13 @@
               },
               {
                 "constant": false,
-                "id": 273,
+                "id": 216,
                 "mutability": "mutable",
                 "name": "day",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 276,
-                "src": "771:11:2",
+                "scope": 219,
+                "src": "771:11:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -955,10 +955,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 272,
+                  "id": 215,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "771:7:2",
+                  "src": "771:7:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -969,13 +969,13 @@
               },
               {
                 "constant": false,
-                "id": 275,
+                "id": 218,
                 "mutability": "mutable",
                 "name": "year",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 276,
-                "src": "792:12:2",
+                "scope": 219,
+                "src": "792:12:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -983,10 +983,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 274,
+                  "id": 217,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "792:7:2",
+                  "src": "792:7:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -998,38 +998,38 @@
             ],
             "name": "Date",
             "nodeType": "StructDefinition",
-            "scope": 291,
-            "src": "726:85:2",
+            "scope": 234,
+            "src": "726:85:1",
             "visibility": "public"
           },
           {
             "canonicalName": "PropertyNFT.Property",
-            "id": 287,
+            "id": 230,
             "members": [
               {
                 "constant": false,
-                "id": 278,
+                "id": 221,
                 "mutability": "mutable",
                 "name": "geoLocation",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 287,
-                "src": "842:20:2",
+                "scope": 230,
+                "src": "842:20:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Location_$251_storage_ptr",
+                  "typeIdentifier": "t_struct$_Location_$194_storage_ptr",
                   "typeString": "struct PropertyNFT.Location"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 277,
+                  "id": 220,
                   "name": "Location",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 251,
-                  "src": "842:8:2",
+                  "referencedDeclaration": 194,
+                  "src": "842:8:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Location_$251_storage_ptr",
+                    "typeIdentifier": "t_struct$_Location_$194_storage_ptr",
                     "typeString": "struct PropertyNFT.Location"
                   }
                 },
@@ -1038,13 +1038,13 @@
               },
               {
                 "constant": false,
-                "id": 280,
+                "id": 223,
                 "mutability": "mutable",
                 "name": "landDescription",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 287,
-                "src": "872:22:2",
+                "scope": 230,
+                "src": "872:22:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1052,10 +1052,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 279,
+                  "id": 222,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "872:6:2",
+                  "src": "872:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -1066,28 +1066,28 @@
               },
               {
                 "constant": false,
-                "id": 282,
+                "id": 225,
                 "mutability": "mutable",
                 "name": "assetRecordType",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 287,
-                "src": "904:25:2",
+                "scope": 230,
+                "src": "904:25:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_AssetType_$254",
+                  "typeIdentifier": "t_enum$_AssetType_$197",
                   "typeString": "enum PropertyNFT.AssetType"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 281,
+                  "id": 224,
                   "name": "AssetType",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 254,
-                  "src": "904:9:2",
+                  "referencedDeclaration": 197,
+                  "src": "904:9:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_AssetType_$254",
+                    "typeIdentifier": "t_enum$_AssetType_$197",
                     "typeString": "enum PropertyNFT.AssetType"
                   }
                 },
@@ -1096,28 +1096,28 @@
               },
               {
                 "constant": false,
-                "id": 284,
+                "id": 227,
                 "mutability": "mutable",
                 "name": "activeLease",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 287,
-                "src": "939:17:2",
+                "scope": 230,
+                "src": "939:17:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Lease_$269_storage_ptr",
+                  "typeIdentifier": "t_struct$_Lease_$212_storage_ptr",
                   "typeString": "struct PropertyNFT.Lease"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 283,
+                  "id": 226,
                   "name": "Lease",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 269,
-                  "src": "939:5:2",
+                  "referencedDeclaration": 212,
+                  "src": "939:5:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Lease_$269_storage_ptr",
+                    "typeIdentifier": "t_struct$_Lease_$212_storage_ptr",
                     "typeString": "struct PropertyNFT.Lease"
                   }
                 },
@@ -1126,13 +1126,13 @@
               },
               {
                 "constant": false,
-                "id": 286,
+                "id": 229,
                 "mutability": "mutable",
                 "name": "propertyAddress",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 287,
-                "src": "992:22:2",
+                "scope": 230,
+                "src": "992:22:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1140,10 +1140,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 285,
+                  "id": 228,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "992:6:2",
+                  "src": "992:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -1155,44 +1155,44 @@
             ],
             "name": "Property",
             "nodeType": "StructDefinition",
-            "scope": 291,
-            "src": "816:205:2",
+            "scope": 234,
+            "src": "816:205:1",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 290,
+            "id": 233,
             "mutability": "mutable",
             "name": "properties",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 291,
-            "src": "1026:21:2",
+            "scope": 234,
+            "src": "1026:21:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Property_$287_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Property_$230_storage_$dyn_storage",
               "typeString": "struct PropertyNFT.Property[]"
             },
             "typeName": {
               "baseType": {
                 "contractScope": null,
-                "id": 288,
+                "id": 231,
                 "name": "Property",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 287,
-                "src": "1026:8:2",
+                "referencedDeclaration": 230,
+                "src": "1026:8:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Property_$287_storage_ptr",
+                  "typeIdentifier": "t_struct$_Property_$230_storage_ptr",
                   "typeString": "struct PropertyNFT.Property"
                 }
               },
-              "id": 289,
+              "id": 232,
               "length": null,
               "nodeType": "ArrayTypeName",
-              "src": "1026:10:2",
+              "src": "1026:10:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Property_$287_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Property_$230_storage_$dyn_storage_ptr",
                 "typeString": "struct PropertyNFT.Property[]"
               }
             },
@@ -1200,18 +1200,18 @@
             "visibility": "internal"
           }
         ],
-        "scope": 292,
-        "src": "145:905:2"
+        "scope": 235,
+        "src": "145:905:1"
       }
     ],
-    "src": "0:1050:2"
+    "src": "0:1050:1"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/Users/lilian/Desktop/CryptoProj/RealEstateRoyalties/src/contracts/PropertyNFT.sol",
       "exportedSymbols": {
         "PropertyNFT": [
-          291
+          234
         ]
       }
     },
@@ -1225,71 +1225,71 @@
             ".0"
           ]
         },
-        "id": 232,
+        "id": 175,
         "name": "PragmaDirective",
-        "src": "0:23:2"
+        "src": "0:23:1"
       },
       {
         "attributes": {
-          "SourceUnit": 2066,
+          "SourceUnit": 2009,
           "absolutePath": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
           "file": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
-          "scope": 292,
+          "scope": 235,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 233,
+        "id": 176,
         "name": "ImportDirective",
-        "src": "25:57:2"
+        "src": "25:57:1"
       },
       {
         "attributes": {
-          "SourceUnit": 415,
+          "SourceUnit": 358,
           "absolutePath": "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol",
           "file": "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol",
-          "scope": 292,
+          "scope": 235,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 234,
+        "id": 177,
         "name": "ImportDirective",
-        "src": "84:59:2"
+        "src": "84:59:1"
       },
       {
         "attributes": {
           "abstract": true,
           "contractDependencies": [
-            414,
-            464,
-            754,
-            766,
-            2065,
-            2181,
-            2212,
-            2239,
-            2576
+            357,
+            407,
+            697,
+            709,
+            2008,
+            2124,
+            2155,
+            2182,
+            2519
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            291,
-            414,
-            464,
-            2065,
-            2212,
-            2239,
-            2181,
-            754,
-            766,
-            2576
+            234,
+            357,
+            407,
+            2008,
+            2155,
+            2182,
+            2124,
+            697,
+            709,
+            2519
           ],
           "name": "PropertyNFT",
-          "scope": 292
+          "scope": 235
         },
         "children": [
           {
@@ -1301,17 +1301,17 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC721",
-                  "referencedDeclaration": 2065,
+                  "referencedDeclaration": 2008,
                   "type": "contract ERC721"
                 },
-                "id": 235,
+                "id": 178,
                 "name": "UserDefinedTypeName",
-                "src": "178:6:2"
+                "src": "178:6:1"
               }
             ],
-            "id": 236,
+            "id": 179,
             "name": "InheritanceSpecifier",
-            "src": "178:6:2"
+            "src": "178:6:1"
           },
           {
             "attributes": {
@@ -1322,17 +1322,17 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "VRFConsumerBase",
-                  "referencedDeclaration": 414,
+                  "referencedDeclaration": 357,
                   "type": "contract VRFConsumerBase"
                 },
-                "id": 237,
+                "id": 180,
                 "name": "UserDefinedTypeName",
-                "src": "186:15:2"
+                "src": "186:15:1"
               }
             ],
-            "id": 238,
+            "id": 181,
             "name": "InheritanceSpecifier",
-            "src": "186:15:2"
+            "src": "186:15:1"
           },
           {
             "attributes": {
@@ -1340,7 +1340,7 @@
               "mutability": "mutable",
               "name": "requestToName",
               "overrides": null,
-              "scope": 291,
+              "scope": 234,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(bytes32 => string)",
@@ -1358,28 +1358,28 @@
                       "name": "bytes32",
                       "type": "bytes32"
                     },
-                    "id": 239,
+                    "id": 182,
                     "name": "ElementaryTypeName",
-                    "src": "217:7:2"
+                    "src": "217:7:1"
                   },
                   {
                     "attributes": {
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 240,
+                    "id": 183,
                     "name": "ElementaryTypeName",
-                    "src": "228:6:2"
+                    "src": "228:6:1"
                   }
                 ],
-                "id": 241,
+                "id": 184,
                 "name": "Mapping",
-                "src": "209:26:2"
+                "src": "209:26:1"
               }
             ],
-            "id": 242,
+            "id": 185,
             "name": "VariableDeclaration",
-            "src": "209:40:2"
+            "src": "209:40:1"
           },
           {
             "attributes": {
@@ -1387,7 +1387,7 @@
               "mutability": "mutable",
               "name": "requestToSender",
               "overrides": null,
-              "scope": 291,
+              "scope": 234,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(bytes32 => address)",
@@ -1405,9 +1405,9 @@
                       "name": "bytes32",
                       "type": "bytes32"
                     },
-                    "id": 243,
+                    "id": 186,
                     "name": "ElementaryTypeName",
-                    "src": "263:7:2"
+                    "src": "263:7:1"
                   },
                   {
                     "attributes": {
@@ -1415,25 +1415,25 @@
                       "stateMutability": "nonpayable",
                       "type": "address"
                     },
-                    "id": 244,
+                    "id": 187,
                     "name": "ElementaryTypeName",
-                    "src": "274:7:2"
+                    "src": "274:7:1"
                   }
                 ],
-                "id": 245,
+                "id": 188,
                 "name": "Mapping",
-                "src": "255:27:2"
+                "src": "255:27:1"
               }
             ],
-            "id": 246,
+            "id": 189,
             "name": "VariableDeclaration",
-            "src": "255:43:2"
+            "src": "255:43:1"
           },
           {
             "attributes": {
               "canonicalName": "PropertyNFT.Location",
               "name": "Location",
-              "scope": 291,
+              "scope": 234,
               "visibility": "public"
             },
             "children": [
@@ -1443,7 +1443,7 @@
                   "mutability": "mutable",
                   "name": "latitude",
                   "overrides": null,
-                  "scope": 251,
+                  "scope": 194,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1456,14 +1456,14 @@
                       "name": "uint256",
                       "type": "uint256"
                     },
-                    "id": 247,
+                    "id": 190,
                     "name": "ElementaryTypeName",
-                    "src": "331:7:2"
+                    "src": "331:7:1"
                   }
                 ],
-                "id": 248,
+                "id": 191,
                 "name": "VariableDeclaration",
-                "src": "331:16:2"
+                "src": "331:16:1"
               },
               {
                 "attributes": {
@@ -1471,7 +1471,7 @@
                   "mutability": "mutable",
                   "name": "longitude",
                   "overrides": null,
-                  "scope": 251,
+                  "scope": 194,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1484,19 +1484,19 @@
                       "name": "uint256",
                       "type": "uint256"
                     },
-                    "id": 249,
+                    "id": 192,
                     "name": "ElementaryTypeName",
-                    "src": "357:7:2"
+                    "src": "357:7:1"
                   }
                 ],
-                "id": 250,
+                "id": 193,
                 "name": "VariableDeclaration",
-                "src": "357:17:2"
+                "src": "357:17:1"
               }
             ],
-            "id": 251,
+            "id": 194,
             "name": "StructDefinition",
-            "src": "305:110:2"
+            "src": "305:110:1"
           },
           {
             "attributes": {
@@ -1508,22 +1508,22 @@
                 "attributes": {
                   "name": "TITLE"
                 },
-                "id": 252,
+                "id": 195,
                 "name": "EnumValue",
-                "src": "445:5:2"
+                "src": "445:5:1"
               },
               {
                 "attributes": {
                   "name": "OTHER"
                 },
-                "id": 253,
+                "id": 196,
                 "name": "EnumValue",
-                "src": "460:5:2"
+                "src": "460:5:1"
               }
             ],
-            "id": 254,
+            "id": 197,
             "name": "EnumDefinition",
-            "src": "420:51:2"
+            "src": "420:51:1"
           },
           {
             "attributes": {
@@ -1535,36 +1535,36 @@
                 "attributes": {
                   "name": "T_12M"
                 },
-                "id": 255,
+                "id": 198,
                 "name": "EnumValue",
-                "src": "500:5:2"
+                "src": "500:5:1"
               },
               {
                 "attributes": {
                   "name": "T_24M"
                 },
-                "id": 256,
+                "id": 199,
                 "name": "EnumValue",
-                "src": "515:5:2"
+                "src": "515:5:1"
               },
               {
                 "attributes": {
                   "name": "T_6M"
                 },
-                "id": 257,
+                "id": 200,
                 "name": "EnumValue",
-                "src": "530:4:2"
+                "src": "530:4:1"
               }
             ],
-            "id": 258,
+            "id": 201,
             "name": "EnumDefinition",
-            "src": "476:64:2"
+            "src": "476:64:1"
           },
           {
             "attributes": {
               "canonicalName": "PropertyNFT.Lease",
               "name": "Lease",
-              "scope": 291,
+              "scope": 234,
               "visibility": "public"
             },
             "children": [
@@ -1574,7 +1574,7 @@
                   "mutability": "mutable",
                   "name": "leaseeFirstName",
                   "overrides": null,
-                  "scope": 269,
+                  "scope": 212,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1587,14 +1587,14 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 259,
+                    "id": 202,
                     "name": "ElementaryTypeName",
-                    "src": "568:6:2"
+                    "src": "568:6:1"
                   }
                 ],
-                "id": 260,
+                "id": 203,
                 "name": "VariableDeclaration",
-                "src": "568:22:2"
+                "src": "568:22:1"
               },
               {
                 "attributes": {
@@ -1602,7 +1602,7 @@
                   "mutability": "mutable",
                   "name": "leaseeLastName",
                   "overrides": null,
-                  "scope": 269,
+                  "scope": 212,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1615,14 +1615,14 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 261,
+                    "id": 204,
                     "name": "ElementaryTypeName",
-                    "src": "600:6:2"
+                    "src": "600:6:1"
                   }
                 ],
-                "id": 262,
+                "id": 205,
                 "name": "VariableDeclaration",
-                "src": "600:21:2"
+                "src": "600:21:1"
               },
               {
                 "attributes": {
@@ -1630,7 +1630,7 @@
                   "mutability": "mutable",
                   "name": "leaseTerm",
                   "overrides": null,
-                  "scope": 269,
+                  "scope": 212,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "enum PropertyNFT.LeaseTerm",
@@ -1642,17 +1642,17 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "LeaseTerm",
-                      "referencedDeclaration": 258,
+                      "referencedDeclaration": 201,
                       "type": "enum PropertyNFT.LeaseTerm"
                     },
-                    "id": 263,
+                    "id": 206,
                     "name": "UserDefinedTypeName",
-                    "src": "631:9:2"
+                    "src": "631:9:1"
                   }
                 ],
-                "id": 264,
+                "id": 207,
                 "name": "VariableDeclaration",
-                "src": "631:19:2"
+                "src": "631:19:1"
               },
               {
                 "attributes": {
@@ -1660,7 +1660,7 @@
                   "mutability": "mutable",
                   "name": "startDateTimestamp",
                   "overrides": null,
-                  "scope": 269,
+                  "scope": 212,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "struct PropertyNFT.Date",
@@ -1672,17 +1672,17 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "Date",
-                      "referencedDeclaration": 276,
+                      "referencedDeclaration": 219,
                       "type": "struct PropertyNFT.Date"
                     },
-                    "id": 265,
+                    "id": 208,
                     "name": "UserDefinedTypeName",
-                    "src": "660:4:2"
+                    "src": "660:4:1"
                   }
                 ],
-                "id": 266,
+                "id": 209,
                 "name": "VariableDeclaration",
-                "src": "660:23:2"
+                "src": "660:23:1"
               },
               {
                 "attributes": {
@@ -1690,7 +1690,7 @@
                   "mutability": "mutable",
                   "name": "endDateTimestamp",
                   "overrides": null,
-                  "scope": 269,
+                  "scope": 212,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "struct PropertyNFT.Date",
@@ -1702,28 +1702,28 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "Date",
-                      "referencedDeclaration": 276,
+                      "referencedDeclaration": 219,
                       "type": "struct PropertyNFT.Date"
                     },
-                    "id": 267,
+                    "id": 210,
                     "name": "UserDefinedTypeName",
-                    "src": "693:4:2"
+                    "src": "693:4:1"
                   }
                 ],
-                "id": 268,
+                "id": 211,
                 "name": "VariableDeclaration",
-                "src": "693:21:2"
+                "src": "693:21:1"
               }
             ],
-            "id": 269,
+            "id": 212,
             "name": "StructDefinition",
-            "src": "545:176:2"
+            "src": "545:176:1"
           },
           {
             "attributes": {
               "canonicalName": "PropertyNFT.Date",
               "name": "Date",
-              "scope": 291,
+              "scope": 234,
               "visibility": "public"
             },
             "children": [
@@ -1733,7 +1733,7 @@
                   "mutability": "mutable",
                   "name": "month",
                   "overrides": null,
-                  "scope": 276,
+                  "scope": 219,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1746,14 +1746,14 @@
                       "name": "uint256",
                       "type": "uint256"
                     },
-                    "id": 270,
+                    "id": 213,
                     "name": "ElementaryTypeName",
-                    "src": "748:7:2"
+                    "src": "748:7:1"
                   }
                 ],
-                "id": 271,
+                "id": 214,
                 "name": "VariableDeclaration",
-                "src": "748:13:2"
+                "src": "748:13:1"
               },
               {
                 "attributes": {
@@ -1761,7 +1761,7 @@
                   "mutability": "mutable",
                   "name": "day",
                   "overrides": null,
-                  "scope": 276,
+                  "scope": 219,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1774,14 +1774,14 @@
                       "name": "uint256",
                       "type": "uint256"
                     },
-                    "id": 272,
+                    "id": 215,
                     "name": "ElementaryTypeName",
-                    "src": "771:7:2"
+                    "src": "771:7:1"
                   }
                 ],
-                "id": 273,
+                "id": 216,
                 "name": "VariableDeclaration",
-                "src": "771:11:2"
+                "src": "771:11:1"
               },
               {
                 "attributes": {
@@ -1789,7 +1789,7 @@
                   "mutability": "mutable",
                   "name": "year",
                   "overrides": null,
-                  "scope": 276,
+                  "scope": 219,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1802,25 +1802,25 @@
                       "name": "uint256",
                       "type": "uint256"
                     },
-                    "id": 274,
+                    "id": 217,
                     "name": "ElementaryTypeName",
-                    "src": "792:7:2"
+                    "src": "792:7:1"
                   }
                 ],
-                "id": 275,
+                "id": 218,
                 "name": "VariableDeclaration",
-                "src": "792:12:2"
+                "src": "792:12:1"
               }
             ],
-            "id": 276,
+            "id": 219,
             "name": "StructDefinition",
-            "src": "726:85:2"
+            "src": "726:85:1"
           },
           {
             "attributes": {
               "canonicalName": "PropertyNFT.Property",
               "name": "Property",
-              "scope": 291,
+              "scope": 234,
               "visibility": "public"
             },
             "children": [
@@ -1830,7 +1830,7 @@
                   "mutability": "mutable",
                   "name": "geoLocation",
                   "overrides": null,
-                  "scope": 287,
+                  "scope": 230,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "struct PropertyNFT.Location",
@@ -1842,17 +1842,17 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "Location",
-                      "referencedDeclaration": 251,
+                      "referencedDeclaration": 194,
                       "type": "struct PropertyNFT.Location"
                     },
-                    "id": 277,
+                    "id": 220,
                     "name": "UserDefinedTypeName",
-                    "src": "842:8:2"
+                    "src": "842:8:1"
                   }
                 ],
-                "id": 278,
+                "id": 221,
                 "name": "VariableDeclaration",
-                "src": "842:20:2"
+                "src": "842:20:1"
               },
               {
                 "attributes": {
@@ -1860,7 +1860,7 @@
                   "mutability": "mutable",
                   "name": "landDescription",
                   "overrides": null,
-                  "scope": 287,
+                  "scope": 230,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1873,14 +1873,14 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 279,
+                    "id": 222,
                     "name": "ElementaryTypeName",
-                    "src": "872:6:2"
+                    "src": "872:6:1"
                   }
                 ],
-                "id": 280,
+                "id": 223,
                 "name": "VariableDeclaration",
-                "src": "872:22:2"
+                "src": "872:22:1"
               },
               {
                 "attributes": {
@@ -1888,7 +1888,7 @@
                   "mutability": "mutable",
                   "name": "assetRecordType",
                   "overrides": null,
-                  "scope": 287,
+                  "scope": 230,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "enum PropertyNFT.AssetType",
@@ -1900,17 +1900,17 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "AssetType",
-                      "referencedDeclaration": 254,
+                      "referencedDeclaration": 197,
                       "type": "enum PropertyNFT.AssetType"
                     },
-                    "id": 281,
+                    "id": 224,
                     "name": "UserDefinedTypeName",
-                    "src": "904:9:2"
+                    "src": "904:9:1"
                   }
                 ],
-                "id": 282,
+                "id": 225,
                 "name": "VariableDeclaration",
-                "src": "904:25:2"
+                "src": "904:25:1"
               },
               {
                 "attributes": {
@@ -1918,7 +1918,7 @@
                   "mutability": "mutable",
                   "name": "activeLease",
                   "overrides": null,
-                  "scope": 287,
+                  "scope": 230,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "struct PropertyNFT.Lease",
@@ -1930,17 +1930,17 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "Lease",
-                      "referencedDeclaration": 269,
+                      "referencedDeclaration": 212,
                       "type": "struct PropertyNFT.Lease"
                     },
-                    "id": 283,
+                    "id": 226,
                     "name": "UserDefinedTypeName",
-                    "src": "939:5:2"
+                    "src": "939:5:1"
                   }
                 ],
-                "id": 284,
+                "id": 227,
                 "name": "VariableDeclaration",
-                "src": "939:17:2"
+                "src": "939:17:1"
               },
               {
                 "attributes": {
@@ -1948,7 +1948,7 @@
                   "mutability": "mutable",
                   "name": "propertyAddress",
                   "overrides": null,
-                  "scope": 287,
+                  "scope": 230,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1961,19 +1961,19 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 285,
+                    "id": 228,
                     "name": "ElementaryTypeName",
-                    "src": "992:6:2"
+                    "src": "992:6:1"
                   }
                 ],
-                "id": 286,
+                "id": 229,
                 "name": "VariableDeclaration",
-                "src": "992:22:2"
+                "src": "992:22:1"
               }
             ],
-            "id": 287,
+            "id": 230,
             "name": "StructDefinition",
-            "src": "816:205:2"
+            "src": "816:205:1"
           },
           {
             "attributes": {
@@ -1981,7 +1981,7 @@
               "mutability": "mutable",
               "name": "properties",
               "overrides": null,
-              "scope": 291,
+              "scope": 234,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "struct PropertyNFT.Property[]",
@@ -1999,32 +1999,32 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "Property",
-                      "referencedDeclaration": 287,
+                      "referencedDeclaration": 230,
                       "type": "struct PropertyNFT.Property"
                     },
-                    "id": 288,
+                    "id": 231,
                     "name": "UserDefinedTypeName",
-                    "src": "1026:8:2"
+                    "src": "1026:8:1"
                   }
                 ],
-                "id": 289,
+                "id": 232,
                 "name": "ArrayTypeName",
-                "src": "1026:10:2"
+                "src": "1026:10:1"
               }
             ],
-            "id": 290,
+            "id": 233,
             "name": "VariableDeclaration",
-            "src": "1026:21:2"
+            "src": "1026:21:1"
           }
         ],
-        "id": 291,
+        "id": 234,
         "name": "ContractDefinition",
-        "src": "145:905:2"
+        "src": "145:905:1"
       }
     ],
-    "id": 292,
+    "id": 235,
     "name": "SourceUnit",
-    "src": "0:1050:2"
+    "src": "0:1050:1"
   },
   "compiler": {
     "name": "solc",
@@ -2032,7 +2032,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-03-27T18:36:39.672Z",
+  "updatedAt": "2021-03-27T18:46:01.817Z",
   "devdoc": {
     "methods": {
       "approve(address,uint256)": {
