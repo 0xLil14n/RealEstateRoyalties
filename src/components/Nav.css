@@ -4,6 +4,7 @@
   position: fixed;
   width: 100%;
   z-index: 3;
+  font-family: 'Quicksand', sans-serif !important;
 }
 
 .header ul {
@@ -16,7 +17,6 @@
 .header li a {
   display: block;
   padding: 20px 20px;
-
   text-decoration: none;
   color: #fff !important;
   font-size: 22px;
