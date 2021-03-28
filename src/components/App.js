@@ -2,7 +2,7 @@ import { Tabs, Tab } from 'react-bootstrap'
 import React, { Component } from 'react';
 import Web3 from 'web3';
 import './App.css';
-
+import Nav from './Nav.js';
 
 class App extends Component {
 
@@ -47,30 +47,13 @@ class App extends Component {
   render() {
     return (
       <div className='text-monospace'>
-        <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-          <a
-            className="navbar-brand col-sm-3 col-md-2 mr-0"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-        <div>🏠💵</div>
-          <b>RealEstate Royalites</b>
-        </a>
-        </nav>
+        <Nav/>
         <div className="container-fluid mt-5 text-center">
         <br></br>
-          <h1>Welcome to RealEstate Royalties</h1>
+          <h1 class="hero">Welcome to RealEstate Royalties</h1>
           <h2>{this.state.account}</h2>
           <br></br>
-          <div className="row">
-            <main role="main" className="col-lg-12 d-flex text-center">
-              <div className="content mr-auto ml-auto">
-              <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-
-              </Tabs>
-              </div>
-            </main>
-          </div>
+            <a href="" class="button w-button">Mint Token</a>
         </div>
       </div>
     );
