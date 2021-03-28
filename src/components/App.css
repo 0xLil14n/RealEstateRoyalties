@@ -1,1 +1,46 @@
-/* TODO add styles */
+/* Add a black background color to the top navigation */
+.hero {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.padding-nav{
+    padding: 20px !important;
+}
+.navbar-brand{
+    margin: 0px 120px 0 50px !important;
+}
+.nav-links-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+}
+.nav-links{
+    margin-right: 50px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50 !important;
+  color: white !important;
+}
+
+a:hover{
+    background-color: #ddd;
+  color: pink;
+}
+.button {
+  background-color: #000099; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
