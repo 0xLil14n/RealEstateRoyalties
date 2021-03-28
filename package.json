@@ -3,6 +3,7 @@
   "version": "0.6.0",
   "description": "A Chainlink example in a Truffle box",
   "scripts": {
+    "build": "react-scripts build",
     "compile": "npx truffle compile",
     "console:dev": "npx truffle console --network cldev",
     "console:kovan": "npx truffle console --network kovan",
@@ -11,6 +12,7 @@
     "lint": "yarn solhint",
     "migrate:dev": "npx truffle migrate --reset --network cldev",
     "migrate:kovan": "npx truffle migrate --network kovan",
+    "start": "react-scripts start",
     "test": "npx truffle test"
   },
   "license": "MIT",
@@ -18,7 +20,10 @@
     "@chainlink/contracts": "^0.1.6",
     "@openzeppelin/contracts": "^3.4.1",
     "@truffle/hdwallet-provider": "^1.2.1",
+    "bootstrap": "^4.6.0",
     "dotenv": "^8.2.0",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.5.2",
     "truffle-hdwallet-provider-privkey": "^0.3.0"
   },
   "devDependencies": {
@@ -36,5 +41,17 @@
     "**/node-fetch": "^2.6.1",
     "**/yargs-parser": "^13.1.2",
     "**/mem": "^4.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

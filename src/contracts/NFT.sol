@@ -39,11 +39,11 @@ contract RealEstateNFT is PropertyNFT {
             startDateTimestamp: Date({month: 1, day: 20, year: 2021}),
             endDateTimestamp:Date({month: 2, day: 1, year: 2022})
         });
-//        Lease[] leases = [activeLease];
+//        Lease[] memory leases = new Lease[];
         properties.push(
             Property({
                 activeLease: activeLease,
-//                leases: []leases,
+//                leases: leases,
                 geoLocation:Location({
                     latitude: randomLatitude,
                     longitude: randomLongitude
