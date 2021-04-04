@@ -2,7 +2,7 @@ require('babel-register');
 require('babel-polyfill');
 require('dotenv').config();
 const HDWalletProvider = require('truffle-hdwallet-provider-privkey');
-const privateKey = process.env.PRIVATE_KEY || "";
+const privateKeys = [process.env.PRIVATE_KEY] || "";
 const KOVAN_RPC_URL = process.env.KOVAN_RPC_URL;
 const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL;
 const MAINNET_RPC_URL = process.env.MAINNET_RPC_URL;
@@ -18,7 +18,7 @@ module.exports = {
     kovan: {
       provider: function() {
         return new HDWalletProvider(
-          privateKey,
+          privateKeys,
           KOVAN_RPC_URL
         )
       },
@@ -29,7 +29,7 @@ module.exports = {
     main: {
       provider: function() {
         return new HDWalletProvider(
-          privateKey,
+          privateKeys,
             MAINNET_RPC_URL
         )
       },
@@ -40,7 +40,7 @@ module.exports = {
     rinkeby: {
       provider: function() {
         return new HDWalletProvider(
-          privateKey,
+          privateKeys,
           RINKEBY_RPC_URL
         )
       },
@@ -51,7 +51,7 @@ module.exports = {
     ropsten: {
       provider: function() {
         return new HDWalletProvider(
-          privateKey,
+          privateKeys,
           ROPSTEN_RPC_URL
         )
       },
