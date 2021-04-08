@@ -60,6 +60,12 @@ module.exports = {
       network_id: 3
     }
   },
+  api_keys: {
+      etherscan: process.env.ETHERSCAN_API_KEY
+  },
+    plugins: [
+      'truffle-plugin-verify'
+    ],
   contracts_directory: './src/contracts/',
   contracts_build_directory: './src/abis/',
   compilers: {
