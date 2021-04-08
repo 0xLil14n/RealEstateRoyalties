@@ -18,5 +18,11 @@ truffle compile
 deploy contracts:
 truffle migrate
 
+deploy to rinkeby:
+truffle migrate --reset --network rinkeby 
+
+Verify contract on etherscan:
+truffle run verify contractName --network rinkeby --license MIT
+
 START APP:
 npm run start
