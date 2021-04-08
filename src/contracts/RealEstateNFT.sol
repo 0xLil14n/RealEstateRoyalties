@@ -6,6 +6,14 @@ import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 import "./PropertyNFT.sol";
 
 contract RealEstateNFT is PropertyNFT {
+    struct Property {
+        Location geoLocation;
+        string landDescription;
+//        AssetType assetRecordType;
+//        Lease activeLease;
+        string propertyAddress;
+    }
+    Property[] properties;
     bytes32 internal keyHash;
     address public vrfCoordinator;
     uint256 internal fee;
@@ -15,9 +23,11 @@ contract RealEstateNFT is PropertyNFT {
     public {
         keyHash = _keyHash;
         vrfCoordinator = _VRFCoordinator;
-        fee = 0.1*10**18; // 0.1 LINK
+        fee = 1.5*10**18; // 1.5 LINK
     }
-
+//    function getPropertyFromId(uint256 id) public returns (Property memory) {
+//        return properties[id];
+//    }
     function requestToMintNewRealEstateToken(string memory name, uint256 userProvidedSeed) public returns (bytes32){
         bytes32 requestId = requestRandomness(keyHash, fee, userProvidedSeed); // request a random number
         requestToName[requestId] = name;
@@ -32,23 +42,21 @@ contract RealEstateNFT is PropertyNFT {
         uint256 randomLatitude = (randomNumber % 100000);
         uint256 randomLongitude = (randomNumber % 10000);
 
-        Lease memory activeLease = Lease({
-            leaseeFirstName:"Leaser FIrst name",
-            leaseeLastName:"Leaser Last name",
-            leaseTerm: LeaseTerm.T_12M,
-            startDateTimestamp: Date({month: 1, day: 20, year: 2021}),
-            endDateTimestamp:Date({month: 2, day: 1, year: 2022})
-        });
-//        Lease[] memory leases = new Lease[];
         properties.push(
             Property({
-                activeLease: activeLease,
+//                activeLease: Lease({
+//                    leaseeFirstName:"Leaser FIrst name",
+//                    leaseeLastName:"Leaser Last name",
+//                    leaseTerm: LeaseTerm.T_12M,
+//                    startDateTimestamp: Date({month: 1, day: 20, year: 2021}),
+//                    endDateTimestamp:Date({month: 2, day: 1, year: 2022})
+//                }),
 //                leases: leases,
                 geoLocation:Location({
                     latitude: randomLatitude,
                     longitude: randomLongitude
                 }),
-                assetRecordType: AssetType.TITLE,
+//                assetRecordType: AssetType.TITLE,
                 landDescription: "single family home. 3br, 4ba, 2432 sqft",
                 propertyAddress: "150 west 23rd Street, New York, NY"
             })

@@ -34,13 +34,5 @@ abstract contract PropertyNFT is ERC721, VRFConsumerBase {
         uint256 day;
         uint256 year;
     }
-    struct Property {
-        Location geoLocation;
-        string landDescription;
-        AssetType assetRecordType;
-        Lease activeLease;
-//        Lease[] leases;
-        string propertyAddress;
-    }
-    Property[] properties;
+
 }

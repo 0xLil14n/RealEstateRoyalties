@@ -1,0 +1,28 @@
+{
+  "name":"150 West 23rd NYC",
+  "description": "3br 4ba 2432 sqft NYC penthouse",
+  "image": "https://ipfs.io/ipfs/QmNajG8NYf2QdS4iAsx8Zt7DN6hcUEf2mPKqmWLQ6RoJYW?filename=exampleproperty.png",
+  "attributes": [
+    {
+      "trait_type": "geoLocation",
+      "value": [
+          {
+            "trait_type": "latitude",
+            "value": 12349528
+          },
+          {
+            "trait_type": "latitude",
+            "value": 285102028
+          }
+      ]
+    },
+    {
+      "trait_type": "landDescription",
+      "value": "single family home. 3br, 4ba, 2432 sqft. located in Chelsea, Manhattan"
+    },
+    {
+      "trait_type": "propertyAddress",
+      "value": "150 west 23rd Street, New York, NY"
+    }
+  ]
+}
