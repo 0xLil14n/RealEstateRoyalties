@@ -1,0 +1,21 @@
+.button {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f540f2;
+    border: .2px solid #f540f2;
+    color: white;
+    padding: 15px 25px !important;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 300!important;
+    letter-spacing: -1px!important;
+
+    border-radius: 40px;
+}
+
+button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all .3s;
+}

@@ -1,0 +1,47 @@
+form{
+
+
+}
+.wrapper {
+    background-image: linear-gradient(to left, #0253c1, #01152f);
+
+    list-style-type: none;
+    padding: 0;
+    border-radius: 3px;
+  }
+  .wrapper >* {
+    opacity: 1;
+  }
+  .form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em;
+  }
+  .form-row > label {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+  }
+  .form-row > input {
+    flex: 2;
+    font-family: VCR,monospace!important;
+    font-size: large;
+  }
+  .form-row > input,
+  .form-row > .submit,
+   .form-row > button{
+    padding: .5em;
+  }
+
+.error{
+    color: red;
+}
+.success{
+    color: green;
+}
+.success,
+.error{
+    background-color:white;
+    padding: 10px;
+    text-transform:none;
+    font-size:medium;
+}

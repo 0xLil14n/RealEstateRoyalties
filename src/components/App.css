@@ -17,13 +17,21 @@ body{
     font-weight: 300!important;
 }
 
-.hero {
-    padding-top: 350px;
+.component-wrapper {
     font-family: 'Quicksand', sans-serif;
     margin: 0 auto;
     width: 90%;
 }
 
+.hero-padding-top{
+    padding-top: 350px;
+}
+.tokenize-padding-top{
+    padding-top:100px;
+}
+.lowerCase{
+    text-transform: none;
+}
 /* Add a color to the active/current link */
 .topnav a.active {
   color: white !important;
@@ -33,29 +41,7 @@ a:hover{
 
   color: pink;
 }
-.button {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #f540f2;
-    border: .2px solid #f540f2;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 300!important;
-    letter-spacing: -1px!important;
-    margin:10px 30px;
 
-    border-radius: 25px;
-}
-
-button:hover{
-
-  cursor: pointer;
-  transform: scale(1.1);
-  transition: all .3s;
-}
 
 .neon-divider {
     width: 100%;

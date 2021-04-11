@@ -3,8 +3,9 @@ pragma solidity ^0.6.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-abstract contract PropertyNFT is ERC721, VRFConsumerBase {
+abstract contract PropertyNFT is ERC721, VRFConsumerBase, Ownable {
 
     mapping(bytes32 => string) requestToName;
     mapping(bytes32 => address) requestToSender;
