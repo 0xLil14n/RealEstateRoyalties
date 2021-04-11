@@ -1,0 +1,55 @@
+{
+  "name": "Chainlink Hackathon Property",
+  "description": "Chainlink property fit for a Link Marine of high rank.",
+  "image": "https://ipfs.io/ipfs/QmRSCvrGgLY4ZkfBVbqmhVnbpWBhPF6vC9FLYdbMHYsNai?filename=propertyNFT.jpg",
+  "attributes": [
+    {
+      "trait_type": "landDescription",
+      "value": "Chainlink property fit for a Link Marine of high rank."
+    },
+    {
+      "trait_type": "propertyAddress",
+      "value": "111 Chainlink Circle Boston, MA"
+    },
+    {
+      "trait_type": "boundariesURI",
+      "value": "https://ipfs.io/ipfs/QmRSCvrGgLY4ZkfBVbqmhVnbpWBhPF6vC9FLYdbMHYsNai?filename=propertyNFT.jpg"
+    },
+    {
+      "trait_type": "floorplansURI",
+      "value": "https://ipfs.io/ipfs/QmRSCvrGgLY4ZkfBVbqmhVnbpWBhPF6vC9FLYdbMHYsNai?filename=propertyNFT.jpg"
+    },
+    {
+      "trait_type": "easements",
+      "value": "N/A"
+    },
+    {
+      "trait_type": "schoolZoning",
+      "value": "A"
+    },
+    {
+      "trait_type": "buildingPermits",
+      "value": "Permit A:"
+    },
+    {
+      "trait_type": "caveats",
+      "value": "N/A"
+    },
+    {
+      "trait_type": "municipality",
+      "value": "Boston County"
+    },
+    {
+      "trait_type": "environmentTitle",
+      "value": "Title I"
+    },
+    {
+      "trait_type": "leasingAndMiningRights",
+      "value": "No mining rights."
+    },
+    {
+      "trait_type": "geographyAndTopology",
+      "value": "N/A"
+    }
+  ]
+}

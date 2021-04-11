@@ -13,7 +13,47 @@ const metadataTemple = {
         {
             "trait_type": "propertyAddress",
             "value": ""
-        }
+        },
+        {
+            "trait_type": "boundariesURI",
+            "value": ""
+        },
+        {
+            "trait_type": "floorplansURI",
+            "value": ""
+        },
+        {
+            "trait_type": "easements",
+            "value": ""
+        },
+        {
+            "trait_type": "schoolZoning",
+            "value": ""
+        },
+        {
+            "trait_type": "buildingPermits",
+            "value": ""
+        },
+        {
+            "trait_type": "caveats",
+            "value": ""
+        },
+        {
+            "trait_type": "municipality",
+            "value": ""
+        },
+        {
+            "trait_type": "environmentTitle",
+            "value": ""
+        },
+        {
+            "trait_type": "leasingAndMiningRights",
+            "value": ""
+        },
+        {
+            "trait_type": "geographyAndTopology",
+            "value": ""
+        },
     ]
 }
 module.exports = async callback => {
@@ -24,10 +64,13 @@ module.exports = async callback => {
         console.log('Let\'s get the overview of your property ' + index + ' of ' + length)
         let nfTitleMetadata = metadataTemple
 
-//        let property = await deployedNFTitle.properties[index]
+//        let property = await deployedNFTitle.properties(index);
 
         let property = await deployedNFTitle.getPropertyMetadata(0);
         console.log('propertytyyt', property);
+        // get ownerOf
+        let owner = await deployedNFTitle.ownerOf(index);
+        console.log('owner:', owner);
         index++
         nfTitleMetadata['name'] = property[0];
         nfTitleMetadata['description']= property[1];
@@ -38,6 +81,7 @@ module.exports = async callback => {
         console.log(nfTitleMetadata['name'])
         nfTitleMetadata['attributes'][0]['value'] = property[1]
         nfTitleMetadata['attributes'][1]['value'] = property[2]
+        nfTitleMetadata['attributes'][2]['value'] = property[3]
 
         filename = 'src/metadata/' + nfTitleMetadata['name'].toLowerCase().replace(/\s/g, '-')
         let data = JSON.stringify(nfTitleMetadata)

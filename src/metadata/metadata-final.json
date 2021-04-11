@@ -1,0 +1,31 @@
+{
+  "name": "Chainlink Hackathon Property 1",
+  "description": "$22,000,000 Chainlink Themed Penthouse in the heart of LA",
+  "image": "https://ipfs.io/ipfs/QmRSCvrGgLY4ZkfBVbqmhVnbpWBhPF6vC9FLYdbMHYsNai?filename=propertyNFT.jpg",
+  "attributes": [
+    {
+      "trait_type": "landDescription",
+      "value": "$22,000,000 Chainlink Themed Penthouse in the heart of LA"
+    },
+    {
+      "trait_type": "propertyAddress",
+      "value": "111 Laurel Way Los Angeles, CA"
+    },
+    {
+      "trait_type": "municipality",
+      "value": "Los Angeles County"
+    },
+    {
+      "trait_type": "estimatedPropertyValue",
+      "value": 10252
+    },
+    {
+      "trait_type": "schoolZoning",
+      "value": "Zone A"
+    },
+    {
+      "trait_type": "buildingPermits",
+      "value": "No Active Permits."
+    }
+  ]
+}

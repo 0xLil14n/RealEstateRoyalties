@@ -11,10 +11,27 @@ contract RealEstateNFT is PropertyNFT {
     struct Property {
         string landDescription;
         string propertyAddress;
-        string propertyName;
-        int price;
+        string name;
+//        string activeLease; // TODO add automatic updates for activeLease property
+        int estimatedPropertyValue; // TODO integrate with api to automatically update estimated property value
+        string schoolZoning; // TODO integrate with a school zoning api?
+        string buildingPermits;
+        string municipality;
+//        string boundaries;
+//        string floorplans;
+//        string easements;
     }
-
+    struct PropertyDetails {
+        string schoolZoning; // TODO integrate with a school zoning api?
+        string buildingPermits;
+        string caveats;
+        string municipality;
+        string environmentTitle;
+        string leasingAndMiningRights;
+        string geographyAndTopology;
+    }
+    mapping(uint256 => string) public tokenIdToActiveLease;
+    mapping(uint256 => PropertyDetails) public tokenIdToPropertyDetails;
     Property[] public properties;
 
     bytes32 internal keyHash;
@@ -55,37 +72,74 @@ contract RealEstateNFT is PropertyNFT {
         string memory,
         string memory,
         int,
-        address
+        string memory,
+        string memory,
+        string memory
     )
     {
-        int priceInETH = ((properties[tokenId].price * 100000000 )/ getThePrice()) ;
+
+
+        int priceInETH = ((properties[tokenId].estimatedPropertyValue * 100000000 )/ getThePrice()) ;
         return (
-            properties[tokenId].propertyName,
+            properties[tokenId].name,
             properties[tokenId].landDescription,
             properties[tokenId].propertyAddress,
             priceInETH,
-            tokenIdToOwner[tokenId]
+            properties[tokenId].schoolZoning,
+            properties[tokenId].buildingPermits,
+            properties[tokenId].municipality
         );
     }
 
+    function updateTokenPropertyDetails(
+        uint256 tokenId,
+        string memory schoolZoning,
+        string memory buildingPermits,
+        string memory caveats,
+        string memory municipality,
+        string memory environmentTitle,
+        string memory leasingAndMiningRights,
+        string memory geographyAndTopology
+    ) public {
+        require(
+            _isApprovedOrOwner(_msgSender(), tokenId), "ERC721: updateTokenPropertyDetails caller is not owner nor approved"
+        );
+        tokenIdToPropertyDetails[tokenId] = PropertyDetails({
+            schoolZoning: schoolZoning,
+            buildingPermits: buildingPermits,
+            caveats: caveats,
+            municipality: municipality,
+            environmentTitle: environmentTitle,
+            leasingAndMiningRights: leasingAndMiningRights,
+            geographyAndTopology: geographyAndTopology
+        });
+    }
     function requestToMintNewRealEstateToken(
         string memory name,
-        int price,
+        int estimatedPropertyValue,
         string memory description,
-        string memory propertyAddress
+        string memory propertyAddress,
+        string memory activeLease,
+        string memory schoolZoning,
+        string memory buildingPermits,
+        string memory municipality
     ) public {
         uint256 newId = properties.length;
+        tokenIdToActiveLease[newId] = activeLease;
+
         properties.push(
             Property({
                 landDescription: description,
                 propertyAddress: propertyAddress,
-                price: price,
-                propertyName: name
+                estimatedPropertyValue: estimatedPropertyValue,
+                name: name,
+                schoolZoning: schoolZoning,
+                municipality: municipality,
+                buildingPermits: buildingPermits
             })
         );
         tokenIdToOwner[newId] = msg.sender;
-        _safeMint(msg.sender, newId); // minting token with ERC721 safeMint
-//        return requestId;
+        _safeMint(msg.sender, newId);
     }
 
     function fulfillRandomness(bytes32 requestId, uint256 randomNumber) internal override {

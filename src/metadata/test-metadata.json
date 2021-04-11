@@ -1,0 +1,31 @@
+{
+  "name": "Chainlink Hackathon Property 222",
+  "description": "Chainlink property fit for a Link Marine of high rank.",
+  "image": "https://ipfs.io/ipfs/QmRSCvrGgLY4ZkfBVbqmhVnbpWBhPF6vC9FLYdbMHYsNai?filename=propertyNFT.jpg",
+  "attributes": [
+    {
+      "trait_type": "landDescription",
+      "value": "Chainlink property fit for a Link Marine of high rank. LINKLINKLINK"
+    },
+    {
+      "trait_type": "propertyAddress",
+      "value": "222 Linky circle Boston MA"
+    },
+    {
+      "trait_type": "boundaries",
+      "value": "aasdf"
+    },
+    {
+      "trait_type": "floorplans",
+      "value": "asdf"
+    },
+    {
+      "trait_type": "easements",
+      "value": "No Easements"
+    },
+    {
+      "trait_type": "estimatedPropertyValue",
+      "value": 46633
+    }
+  ]
+}

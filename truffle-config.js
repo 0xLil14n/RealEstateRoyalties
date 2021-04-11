@@ -22,7 +22,7 @@ module.exports = {
           KOVAN_RPC_URL
         )
       },
-      gas: 5000000,
+      gas: 10000000,
       gasPrice: 5000000000, // 5 gwei
       network_id: 42
     },
@@ -44,7 +44,7 @@ module.exports = {
           RINKEBY_RPC_URL
         )
       },
-      gas: 5000000,
+      gas: 10000000,
       gasPrice: 5000000000, // 5 gwei
       network_id: 4
     },
@@ -55,7 +55,7 @@ module.exports = {
           ROPSTEN_RPC_URL
         )
       },
-      gas: 5000000,
+      gas: 50000000,
       gasPrice: 5000000000, // 5 gwei
       network_id: 3
     }

@@ -13,10 +13,14 @@ class Tokenize extends Component {
          nfTitle: this.props.nfTitle,
          isLoading: false,
          name:'',
-         price: '',
+         estimatedPropertyValue: '',
          errorMsg: '',
          description: '',
-         propertyAddress: ''
+         propertyAddress: '',
+         activeLease: 'N/A',
+         municipality: '',
+         schoolZoning: 'Zone A',
+         buildingPermits: 'No Active Permits.'
 
       }
     }
@@ -31,13 +35,29 @@ class Tokenize extends Component {
 
             {this.state.isLoading &&<Loading/>}
             {!this.state.isLoading && <form onSubmit={(e) => {
-                         e.preventDefault()
-                         let name = this.name.value
-                         let price = this.price.value
-                         let description = this.description.value
-                         let propertyAddress = this.propertyAddress.value
-                         this.mintNFT(name, price, this.state.account, description, propertyAddress)
-                       }}
+                 e.preventDefault()
+                 let name = this.name.value
+                 let estimatedPropertyValue = this.estimatedPropertyValue.value
+                 let description = this.description.value
+                 let propertyAddress = this.propertyAddress.value
+                 let activeLease = this.activeLease.value
+                 let municipality = this.municipality.value
+                 let schoolZoning = this.schoolZoning.value
+                 let buildingPermits = this.buildingPermits.value
+                 let tokenURI = this.tokenURI.value
+                 this.mintNFT(
+                    name,
+                    estimatedPropertyValue,
+                    this.state.account,
+                    description,
+                    propertyAddress,
+                    activeLease,
+                    municipality,
+                    schoolZoning,
+                    buildingPermits,
+                    tokenURI
+                )
+            }}
             >
 
                 <FormRow label={"property name:"}
@@ -49,14 +69,14 @@ class Tokenize extends Component {
                                ref={(input) => { this.name = input }}
                            />}
                 />
-                <FormRow label={"Price:"}
+                <FormRow label={"Estimated Property Value:"}
                     child={
                         <input
-                            id="price"
+                            id="estimatedPropertyValue"
                             type="text"
-                            name="price"
-                            defaultValue={this.state.price}
-                            ref={(input) => { this.price = input }}
+                            name="estimatedPropertyValue"
+                            defaultValue={this.state.estimatedPropertyValue}
+                            ref={(input) => { this.estimatedPropertyValue = input }}
                         />
                     }
                 />
@@ -82,6 +102,61 @@ class Tokenize extends Component {
                         />
                     }
                 />
+                <FormRow label={"Active Lease:"}
+                    child={
+                        <input
+                            id="activeLease"
+                            type="text"
+                            name="activeLease"
+                            defaultValue={this.state.activeLease}
+                            ref={(input) => { this.activeLease = input }}
+                        />
+                    }
+                />
+                <FormRow label={"Municipality:"}
+                    child={
+                        <input
+                            id="municipality"
+                            type="text"
+                            name="municipality"
+                            defaultValue={this.state.municipality}
+                            ref={(input) => { this.municipality = input }}
+                        />
+                    }
+                />
+                <FormRow label={"School Zone "}
+                    child={
+                        <input
+                            id="schoolZoning"
+                            type="text"
+                            name="schoolZoning"
+                            defaultValue={this.state.schoolZoning}
+                            ref={(input) => { this.schoolZoning = input }}
+                        />
+                    }
+                />
+                <FormRow label={"Building Permits:"}
+                    child={
+                        <input
+                            id="buildingPermits"
+                            type="text"
+                            name="buildingPermits"
+                            defaultValue={this.state.buildingPermits}
+                            ref={(input) => { this.buildingPermits = input }}
+                        />
+                    }
+                />
+                <FormRow label={"Token URI:"}
+                    child={
+                        <input
+                            id="tokenURI"
+                            type="text"
+                            name="tokenURI"
+                            defaultValue={this.state.tokenURI}
+                            ref={(input) => { this.tokenURI = input }}
+                        />
+                    }
+                />
                 <ul>
                 <li className="form-row">
                     <button className="submit button" >submit </button>
@@ -92,14 +167,61 @@ class Tokenize extends Component {
             </div>
         )
     }
-    async mintNFT(name, price, account, description, propertyAddress) {
+    async mintNFT(
+        name,
+        estimatedPropertyValue,
+        account,
+        description,
+        propertyAddress,
+        activeLease,
+        municipality,
+        schoolZoning,
+        buildingPermits,
+        tokenURI
+    ) {
           try {
             this.setState({isLoading: true});
-            await this.state.nfTitle.methods.requestToMintNewRealEstateToken(name, price, description, propertyAddress).send({from: account})
+            await this.state.nfTitle.methods
+                        .requestToMintNewRealEstateToken(
+                            name,
+                            estimatedPropertyValue,
+                            description,
+                            propertyAddress,
+                            activeLease,
+                            municipality,
+                            schoolZoning,
+                            buildingPermits
+                        ).send({from: account})
             this.setState({isLoading:false, success:true});
           } catch(e) {
-
-            this.setState({errorMsg: e.message, name: name, price: price, description: description, propertyAddress: propertyAddress, isLoading:false, error: true});
+            this.setState({
+                errorMsg: e.message,
+                name: name,
+                estimatedPropertyValue: estimatedPropertyValue,
+                description: description,
+                propertyAddress: propertyAddress,
+                isLoading:false,
+                error: true
+            });
+            return;
+          }
+          try {
+            tokenId = await this.state.nfTitle.methods.getNumberOfProperties()
+            await this.state.nfTitle.methods
+                .setTokenURI(
+                    tokenId,
+                    tokenURI
+                ).send({from: account})
+          } catch(e) {
+            this.setState({errorMsg: e.message,
+                name: name,
+                estimatedPropertyValue: estimatedPropertyValue,
+                description: description,
+                propertyAddress: propertyAddress,
+                isLoading:false,
+                error: true
+            });
+            return;
           }
     }
 }
