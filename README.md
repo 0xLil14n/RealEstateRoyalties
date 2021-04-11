@@ -3,7 +3,7 @@ Chainlink Hackathon Submission
 
 required:
 - Node
-- Ganache
+- env variables for RINKEBY RPC URL + Etherscan API key + wallet private key
 - Metamask (Chrome extension)
 
 install truffle:
