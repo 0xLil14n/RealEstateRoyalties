@@ -13,8 +13,10 @@ class Tokenize extends Component {
          nfTitle: this.props.nfTitle,
          isLoading: false,
          name:'',
-         userProvidedSeed: '',
-         errorMsg: ''
+         price: '',
+         errorMsg: '',
+         description: '',
+         propertyAddress: ''
 
       }
     }
@@ -31,9 +33,10 @@ class Tokenize extends Component {
             {!this.state.isLoading && <form onSubmit={(e) => {
                          e.preventDefault()
                          let name = this.name.value
-                         let userProvidedSeed = this.userProvidedSeed.value
-
-                         this.mintNFT(name, userProvidedSeed, this.state.account)
+                         let price = this.price.value
+                         let description = this.description.value
+                         let propertyAddress = this.propertyAddress.value
+                         this.mintNFT(name, price, this.state.account, description, propertyAddress)
                        }}
             >
 
@@ -46,34 +49,58 @@ class Tokenize extends Component {
                                ref={(input) => { this.name = input }}
                            />}
                 />
-                <FormRow label={"Seed:"}
+                <FormRow label={"Price:"}
                     child={
                         <input
-                            id="userProvidedSeed"
+                            id="price"
                             type="text"
-                            name="userProvidedSeed"
-                            defaultValue={this.state.userProvidedSeed}
-                            ref={(input) => { this.userProvidedSeed = input }}
+                            name="price"
+                            defaultValue={this.state.price}
+                            ref={(input) => { this.price = input }}
                         />
                     }
                 />
-                <FormRow label="" child={<button className="submit button" >submit </button>}/>
+                <FormRow label={"Property Description:"}
+                    child={
+                        <input
+                            id="description"
+                            type="text"
+                            name="description"
+                            defaultValue={this.state.description}
+                            ref={(input) => { this.description = input }}
+                        />
+                    }
+                />
+                <FormRow label={"Property Address:"}
+                    child={
+                        <input
+                            id="propertyAddress"
+                            type="text"
+                            name="propertyAddress"
+                            defaultValue={this.state.propertyAddress}
+                            ref={(input) => { this.propertyAddress = input }}
+                        />
+                    }
+                />
+                <ul>
+                <li className="form-row">
+                    <button className="submit button" >submit </button>
+                    </li>
+                </ul>
+
             </form>}
             </div>
         )
     }
-    async mintNFT(name, userProvidedSeed, account) {
+    async mintNFT(name, price, account, description, propertyAddress) {
           try {
-            console.log('trying to mint 22222 account', account);
             this.setState({isLoading: true});
-            await this.state.nfTitle.methods.requestToMintNewRealEstateToken(name, userProvidedSeed).send({from: account})
+            await this.state.nfTitle.methods.requestToMintNewRealEstateToken(name, price, description, propertyAddress).send({from: account})
             this.setState({isLoading:false, success:true});
           } catch(e) {
-            console.log('error minting token', e);
-            this.setState({errorMsg: e.message, name: name, userProvidedSeed: userProvidedSeed, isLoading:false, error: true});
-          }
 
-          console.log('minting NFT...');
+            this.setState({errorMsg: e.message, name: name, price: price, description: description, propertyAddress: propertyAddress, isLoading:false, error: true});
+          }
     }
 }
 

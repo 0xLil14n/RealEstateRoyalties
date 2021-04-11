@@ -8,7 +8,10 @@ form{
     list-style-type: none;
     padding: 0;
     border-radius: 3px;
-  }
+}
+.wrapper > button {
+    background-image: none !important;
+}
   .wrapper >* {
     opacity: 1;
   }
@@ -20,11 +23,12 @@ form{
   .form-row > label {
     padding: .5em 1em .5em 0;
     flex: 1;
+    font-size: medium;
   }
   .form-row > input {
     flex: 2;
     font-family: VCR,monospace!important;
-    font-size: large;
+    font-size: medium;
   }
   .form-row > input,
   .form-row > .submit,

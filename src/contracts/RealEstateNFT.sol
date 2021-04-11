@@ -4,12 +4,15 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 import "./PropertyNFT.sol";
+import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
 
 contract RealEstateNFT is PropertyNFT {
+    AggregatorV3Interface internal priceFeed;
     struct Property {
         string landDescription;
         string propertyAddress;
         string propertyName;
+        int price;
     }
 
     Property[] public properties;
@@ -24,6 +27,22 @@ contract RealEstateNFT is PropertyNFT {
         keyHash = _keyHash;
         vrfCoordinator = _VRFCoordinator;
         fee = 1.5*10**18; // 1.5 LINK
+        /**
+         * Network: Rinkeby
+         * Aggregator: ETH/USD
+         * Address: 0x8A753747A1Fa494EC906cE90E9f37563A8AF630e
+         */
+        priceFeed = AggregatorV3Interface(0x8A753747A1Fa494EC906cE90E9f37563A8AF630e);
+    }
+    function getThePrice() public view returns (int) {
+        (
+        uint80 roundID,
+        int price,
+        uint startedAt,
+        uint timeStamp,
+        uint80 answeredInRound
+        ) = priceFeed.latestRoundData();
+        return price;
     }
     function getNumberOfProperties() public view returns (uint256) {
         return properties.length;
@@ -35,23 +54,32 @@ contract RealEstateNFT is PropertyNFT {
         string memory,
         string memory,
         string memory,
+        int,
         address
     )
     {
+        int priceInETH = ((properties[tokenId].price * 100000000 )/ getThePrice()) ;
         return (
             properties[tokenId].propertyName,
             properties[tokenId].landDescription,
             properties[tokenId].propertyAddress,
+            priceInETH,
             tokenIdToOwner[tokenId]
         );
     }
 
-    function requestToMintNewRealEstateToken(string memory name, uint256 userProvidedSeed) public {
+    function requestToMintNewRealEstateToken(
+        string memory name,
+        int price,
+        string memory description,
+        string memory propertyAddress
+    ) public {
         uint256 newId = properties.length;
         properties.push(
             Property({
-                landDescription: "single family home. 3br, 4ba, 10,000 sqft",
-                propertyAddress: "120 west 83rd Street, New York, NY",
+                landDescription: description,
+                propertyAddress: propertyAddress,
+                price: price,
                 propertyName: name
             })
         );
