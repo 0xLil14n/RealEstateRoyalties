@@ -9,6 +9,7 @@ contract RealEstateNFT is PropertyNFT {
     struct Property {
         string landDescription;
         string propertyAddress;
+        string propertyName;
     }
 
     Property[] public properties;
@@ -32,43 +33,39 @@ contract RealEstateNFT is PropertyNFT {
     view
     returns (
         string memory,
-        string memory
+        string memory,
+        string memory,
+        address
     )
     {
         return (
+            properties[tokenId].propertyName,
             properties[tokenId].landDescription,
-            properties[tokenId].propertyAddress
+            properties[tokenId].propertyAddress,
+            tokenIdToOwner[tokenId]
         );
     }
 
-    function requestToMintNewRealEstateToken(string memory name, uint256 userProvidedSeed) public returns (bytes32){
-        require(
-            LINK.balanceOf(address(this)) >= fee,
-            "Not enough LINK - please feed contract $LINK"
-        );
-        bytes32 requestId = requestRandomness(keyHash, fee, userProvidedSeed); // request a random number
-        requestToName[requestId] = name;
-        requestToSender[requestId] = msg.sender;
-        return requestId;
-    }
-
-    function fulfillRandomness(bytes32 requestId, uint256 randomNumber) internal override {
-        // for now this is random, but it probably shouldn't be in the future lmao
+    function requestToMintNewRealEstateToken(string memory name, uint256 userProvidedSeed) public {
         uint256 newId = properties.length;
-        uint256 randomLatitude = (randomNumber % 100000);
-        uint256 randomLongitude = (randomNumber % 10000);
-
         properties.push(
             Property({
                 landDescription: "single family home. 3br, 4ba, 10,000 sqft",
-                propertyAddress: "120 west 83rd Street, New York, NY"
+                propertyAddress: "120 west 83rd Street, New York, NY",
+                propertyName: name
             })
         );
-        _safeMint(requestToSender[requestId], newId); // minting token with ERC721 safeMint
+        tokenIdToOwner[newId] = msg.sender;
+        _safeMint(msg.sender, newId); // minting token with ERC721 safeMint
+//        return requestId;
     }
-    function getNfTitlesForOwner(address owner) public returns(uint256[]){
-        return [0];
+
+    function fulfillRandomness(bytes32 requestId, uint256 randomNumber) internal override {
+        // leaving here in case we want to use randomness, but currently not doing anything
+        uint256 randomLatitude = (randomNumber % 100000);
+        uint256 randomLongitude = (randomNumber % 10000);
     }
+
     function setTokenURI(uint256 tokenId, string memory _tokenURI) public {
         require(
             _isApprovedOrOwner(_msgSender(), tokenId), "ERC721: transfer caller is not owner nor approved"

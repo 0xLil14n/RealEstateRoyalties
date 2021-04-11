@@ -9,6 +9,7 @@ abstract contract PropertyNFT is ERC721, VRFConsumerBase, Ownable {
 
     mapping(bytes32 => string) requestToName;
     mapping(bytes32 => address) requestToSender;
+    mapping(uint256 => address) public tokenIdToOwner;
 
     struct Location {
         uint256 latitude;

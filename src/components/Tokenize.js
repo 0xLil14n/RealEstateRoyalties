@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Tokenize.css';
 import './Button.css';
 import Loading from './Loading.js';
+import FormRow from './FormRow.js';
 class Tokenize extends Component {
     constructor(props) {
       super(props)
@@ -25,6 +26,7 @@ class Tokenize extends Component {
             {this.state.success && <h2 className="success">NFTitle created successfully!</h2>}
 
             {this.state.error && <p className="error">Error minting your NFTitle: {this.state.errorMsg}</p>}
+
             {this.state.isLoading &&<Loading/>}
             {!this.state.isLoading && <form onSubmit={(e) => {
                          e.preventDefault()
@@ -34,35 +36,28 @@ class Tokenize extends Component {
                          this.mintNFT(name, userProvidedSeed, this.state.account)
                        }}
             >
-                <ul className="wrapper">
-                    <li className="form-row">
-                        <label className="form-item">Name:</label >
-                          <input
-                                id="name"
-                                type="text"
-                                name="name"
-                                defaultValue={this.state.name}
-                                ref={(input) => { this.name = input }}
-                            />
-                    </li>
-                </ul>
-                <ul className="wrapper">
-                    <li className="form-row">
-                        <label className="form-item">Seed:</label >
-                              <input
-                                id="userProvidedSeed"
-                                type="text"
-                                name="userProvidedSeed"
-                                defaultValue={this.state.userProvidedSeed}
-                                ref={(input) => { this.userProvidedSeed = input }}
-                            />
-                    </li>
-                </ul>
-                <ul className="wrapper">
-                    <li className="form-row">
-                        <button className="submit button" >submit </button>
-                    </li>
-                </ul>
+
+                <FormRow label={"property name:"}
+                    child={<input
+                               id="name"
+                               type="text"
+                               name="name"
+                               defaultValue={this.state.name}
+                               ref={(input) => { this.name = input }}
+                           />}
+                />
+                <FormRow label={"Seed:"}
+                    child={
+                        <input
+                            id="userProvidedSeed"
+                            type="text"
+                            name="userProvidedSeed"
+                            defaultValue={this.state.userProvidedSeed}
+                            ref={(input) => { this.userProvidedSeed = input }}
+                        />
+                    }
+                />
+                <FormRow label="" child={<button className="submit button" >submit </button>}/>
             </form>}
             </div>
         )

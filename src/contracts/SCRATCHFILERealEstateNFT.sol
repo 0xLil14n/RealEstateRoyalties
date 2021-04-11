@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 import "./PropertyNFT.sol";
 
-contract RealEstateNFT is PropertyNFT {
+contract SCRATCHRealEstateNFT is PropertyNFT {
     struct Property {
         Location geoLocation;
         string landDescription;

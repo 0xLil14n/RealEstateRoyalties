@@ -381,6 +381,25 @@
     {
       "inputs": [
         {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenIdToOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
           "internalType": "address",
           "name": "owner",
           "type": "address"
@@ -471,22 +490,22 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"baseURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"randomness\",\"type\":\"uint256\"}],\"name\":\"rawFulfillRandomness\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"tokenByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"tokenOfOwnerByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"approve(address,uint256)\":{\"details\":\"See {IERC721-approve}.\"},\"balanceOf(address)\":{\"details\":\"See {IERC721-balanceOf}.\"},\"baseURI()\":{\"details\":\"Returns the base URI set via {_setBaseURI}. This will be automatically added as a prefix in {tokenURI} to each token's URI, or to the token ID if no specific URI is set for that token ID.\"},\"getApproved(uint256)\":{\"details\":\"See {IERC721-getApproved}.\"},\"isApprovedForAll(address,address)\":{\"details\":\"See {IERC721-isApprovedForAll}.\"},\"name()\":{\"details\":\"See {IERC721Metadata-name}.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"ownerOf(uint256)\":{\"details\":\"See {IERC721-ownerOf}.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"safeTransferFrom(address,address,uint256)\":{\"details\":\"See {IERC721-safeTransferFrom}.\"},\"safeTransferFrom(address,address,uint256,bytes)\":{\"details\":\"See {IERC721-safeTransferFrom}.\"},\"setApprovalForAll(address,bool)\":{\"details\":\"See {IERC721-setApprovalForAll}.\"},\"supportsInterface(bytes4)\":{\"details\":\"See {IERC165-supportsInterface}.     * Time complexity O(1), guaranteed to always use less than 30 000 gas.\"},\"symbol()\":{\"details\":\"See {IERC721Metadata-symbol}.\"},\"tokenByIndex(uint256)\":{\"details\":\"See {IERC721Enumerable-tokenByIndex}.\"},\"tokenOfOwnerByIndex(address,uint256)\":{\"details\":\"See {IERC721Enumerable-tokenOfOwnerByIndex}.\"},\"tokenURI(uint256)\":{\"details\":\"See {IERC721Metadata-tokenURI}.\"},\"totalSupply()\":{\"details\":\"See {IERC721Enumerable-totalSupply}.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"See {IERC721-transferFrom}.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/lilian/Desktop/CryptoProj/RealEstateRoyalties/src/contracts/PropertyNFT.sol\":\"PropertyNFT\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/lilian/Desktop/CryptoProj/RealEstateRoyalties/src/contracts/PropertyNFT.sol\":{\"keccak256\":\"0xaeafa06a0fda3edd153c61c6d6b75fef6534f5a299b3f368b2bbc3f8fb94d6e7\",\"urls\":[\"bzz-raw://5e4a3f2f4d71bf03ba745fa5776101408c4b9009924f59b8a8202746e3666714\",\"dweb:/ipfs/Qmeius8sAXDahLZCzhECQE8CSgtc9nqiiQgGu9Xci21WW9\"]},\"@chainlink/contracts/src/v0.6/VRFConsumerBase.sol\":{\"keccak256\":\"0xbb84a6411e071d5b04b36d7dda59eaf1cb5a28b3b289757a5ac849ddf9befac3\",\"urls\":[\"bzz-raw://6bc702d1ec269920a3f0cf371155b6c4800d36233949873144e95ce3c4427eb3\",\"dweb:/ipfs/QmUrYPpfh7TAcUBx3B5ugW2jCAeWThMssY5oyRgQXQRkbE\"]},\"@chainlink/contracts/src/v0.6/VRFRequestIDBase.sol\":{\"keccak256\":\"0x0c3bd40c63dac8398a979b1228c8ecb1c269c157dd16f2dce2086d2270b65b22\",\"urls\":[\"bzz-raw://ed9db87be9dfb0f763a556d8d80356b08282b8ea48484838cdf470a5c3cd15d5\",\"dweb:/ipfs/QmPLhwDAS3TPDiEQmTyqXnWBqwEMBSbXtjEiQDSGejoiPt\"]},\"@chainlink/contracts/src/v0.6/interfaces/LinkTokenInterface.sol\":{\"keccak256\":\"0xe245a7be950c94d87bb775ae9ee9fbd693fbe2987778e6ce0b04605ea44b7b68\",\"urls\":[\"bzz-raw://bd2c3165d949fc66fe407b96eb3dc2092c7e800f4c073b411bf7b96de3e156c9\",\"dweb:/ipfs/QmcfJhR1Np4GsLWnww2Duqks2wEzYk8VDTvCAYy7MisG1r\"]},\"@chainlink/contracts/src/v0.6/vendor/SafeMathChainlink.sol\":{\"keccak256\":\"0x105f5e9491f3d0bbdd4f1c7627eb839d69b944bfd803028a01cc083597692c1f\",\"urls\":[\"bzz-raw://ec45a2748a024a947a921183d4102d5e206808588501d85ddc4f5668a009bc73\",\"dweb:/ipfs/QmRNAMpq7LdWFnJ7wWKGbUuAcURaGSS42PMxtQ4vjrHmp9\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x15e2d5bd4c28a88548074c54d220e8086f638a71ed07e6b3ba5a70066fcf458d\",\"urls\":[\"bzz-raw://90faf5851c02f9bd42c5bfb54d4f0421a2612f50ab80b2c4fa24fa3792071cc2\",\"dweb:/ipfs/QmRGM4F2PcGVF85aTfaA9YBhCHHDqrMhRjyp6fGeBTtirb\"]},\"@openzeppelin/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0x24141d2f6b98d4cb77a8936eae8cbaad2e261d9062bdc08036096f4550092501\",\"urls\":[\"bzz-raw://b710eb003944777135f027500a5a57b479fe857849f5f467c1ef9687401e3c95\",\"dweb:/ipfs/QmcELzi6KRzAs3DXwxdsoKWRJ13KSeipKQsJgD3unctdZM\"]},\"@openzeppelin/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xf70bc25d981e4ec9673a995ad2995d5d493ea188d3d8f388bba9c227ce09fb82\",\"urls\":[\"bzz-raw://bd970f51e3a77790c2f02b5b1759827c3b897c3d98c407b3631e8af32e3dc93c\",\"dweb:/ipfs/QmPF85Amgbqjk3SNZKsPCsqCw8JfwYEPMnnhvMJUyX58je\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xcc78a17dd88fa5a2edc60c8489e2f405c0913b377216a5b26b35656b2d0dab52\",\"urls\":[\"bzz-raw://526dc85e1f9b9b45830e202568d267d93dde7a4fcccf4ad7798dadcd92304d3c\",\"dweb:/ipfs/QmaoXMB972J3cSDLtBq3xBo4jLwqD2uzXTwujtSPqkYVhR\"]},\"@openzeppelin/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0x118ed7540f56b21ff92e21ebaa73584048e98d2ac04ca67571329bb8dbd9032f\",\"urls\":[\"bzz-raw://da2918b7aff73dd51d41bfcfa548f81eb50531b8353500fdbdacf297076db070\",\"dweb:/ipfs/Qmb8ixAs1vBjZRowQNuNg6bRf2NZmgZ1JTBxmQS14PHpcL\"]},\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x2d99a0deb6648c34fbc66d6ac4a2d64798d7a5321b45624f6736fadc63da1962\",\"urls\":[\"bzz-raw://2dcdce5ede1e5e650d174ec0b35be7d47b6a50f30bc895ef0d9e59fb75052e45\",\"dweb:/ipfs/QmQ2XFsDLTYqfEdw7pYzHiGtFRY11yQm4b6ynYgKqDxeB8\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0xe6bd1b1218338b6f9fe17776f48623b4ac3d8a40405f74a44bc23c00abe2ca13\",\"urls\":[\"bzz-raw://0c354c3f6e9c487759aa7869be4fba68e0b2efc777b514d289c4cbd3ff8f7e1a\",\"dweb:/ipfs/QmdF9LcSYVmiUCL7JxLEYmSLrjga6zJsujfi6sgEJD4M1z\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0xccb917776f826ac6b68bd5a15a5f711e3967848a52ba11e6104d9a4f593314a7\",\"urls\":[\"bzz-raw://430255ad2229ced6d880e61a67bdc6e48dbbaed8354a7c1fe918cd8b8714a886\",\"dweb:/ipfs/QmTHY56odzqEpEC6v6tafaWMYY7vmULw25q5XHJLCCAeox\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0x52146049d6709c870e8ddcd988b5155cb6c5d640cfcd8978aee52bc1ba2ec4eb\",\"urls\":[\"bzz-raw://ada84513617b7c1b2f890b44503735abaec73a1acd030112a17aac7e6c66a4a1\",\"dweb:/ipfs/QmaiFwdio67iJrfjAdkMac24eJ5sS1qD7CZW6PhUU6KjiK\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x28911e614500ae7c607a432a709d35da25f3bc5ddc8bd12b278b66358070c0ea\",\"urls\":[\"bzz-raw://256c8c8af5eb072bc473226ab2b2187149b8fc04f5f4a4820db22527f5ce8e3c\",\"dweb:/ipfs/QmRvi5BhnL7Rxf85KrJhwM6RRhukm4tzoctRdgQEheNyiN\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"@openzeppelin/contracts/utils/EnumerableMap.sol\":{\"keccak256\":\"0x4b087f06b6670a131a5a14e53b1d2a5ef19c034cc5ec42eeebcf9554325744ad\",\"urls\":[\"bzz-raw://f6a6af5d848334e40db419773f6360601e311ffc21c2e274f730b8c542da99fd\",\"dweb:/ipfs/QmfA24cxQ2g41ZWUuDF295dxDJ4xF1bSDYtC3EaLd7CzW8\"]},\"@openzeppelin/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0x1562cd9922fbf739edfb979f506809e2743789cbde3177515542161c3d04b164\",\"urls\":[\"bzz-raw://4580d57781513d98870d9738c7d39094336e0a70cdb90d68dad549c6ced466ec\",\"dweb:/ipfs/Qmf9YZzzRFuvMnav9dgmeRUpdYMMECiZX8w25sHWVbA18V\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0xa1e12f97981f1d0964b1c048978606a57127c56c438bab61cdfe269cad859a74\",\"urls\":[\"bzz-raw://5eefac1760f524971e14aa3f3d79515a3d54fd28c1d3bdca0b36127da349b830\",\"dweb:/ipfs/QmUMzkyH3ytJX5gVPizQruNLhkKmuJb3nFqBDad4LPdg5U\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"baseURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"randomness\",\"type\":\"uint256\"}],\"name\":\"rawFulfillRandomness\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"tokenByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"tokenIdToOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"tokenOfOwnerByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"approve(address,uint256)\":{\"details\":\"See {IERC721-approve}.\"},\"balanceOf(address)\":{\"details\":\"See {IERC721-balanceOf}.\"},\"baseURI()\":{\"details\":\"Returns the base URI set via {_setBaseURI}. This will be automatically added as a prefix in {tokenURI} to each token's URI, or to the token ID if no specific URI is set for that token ID.\"},\"getApproved(uint256)\":{\"details\":\"See {IERC721-getApproved}.\"},\"isApprovedForAll(address,address)\":{\"details\":\"See {IERC721-isApprovedForAll}.\"},\"name()\":{\"details\":\"See {IERC721Metadata-name}.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"ownerOf(uint256)\":{\"details\":\"See {IERC721-ownerOf}.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"safeTransferFrom(address,address,uint256)\":{\"details\":\"See {IERC721-safeTransferFrom}.\"},\"safeTransferFrom(address,address,uint256,bytes)\":{\"details\":\"See {IERC721-safeTransferFrom}.\"},\"setApprovalForAll(address,bool)\":{\"details\":\"See {IERC721-setApprovalForAll}.\"},\"supportsInterface(bytes4)\":{\"details\":\"See {IERC165-supportsInterface}.     * Time complexity O(1), guaranteed to always use less than 30 000 gas.\"},\"symbol()\":{\"details\":\"See {IERC721Metadata-symbol}.\"},\"tokenByIndex(uint256)\":{\"details\":\"See {IERC721Enumerable-tokenByIndex}.\"},\"tokenOfOwnerByIndex(address,uint256)\":{\"details\":\"See {IERC721Enumerable-tokenOfOwnerByIndex}.\"},\"tokenURI(uint256)\":{\"details\":\"See {IERC721Metadata-tokenURI}.\"},\"totalSupply()\":{\"details\":\"See {IERC721Enumerable-totalSupply}.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"See {IERC721-transferFrom}.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/lilian/Desktop/CryptoProj/RealEstateRoyalties/src/contracts/PropertyNFT.sol\":\"PropertyNFT\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/lilian/Desktop/CryptoProj/RealEstateRoyalties/src/contracts/PropertyNFT.sol\":{\"keccak256\":\"0x3434bdfc197c949bfe4365178a865d017b9591322b3d26cfc597e6630ef1a6a7\",\"urls\":[\"bzz-raw://c4e111389293d5f7d002251886b304c0f1f12758991cf0e028e8680a7f88a85b\",\"dweb:/ipfs/QmRNep8RNwy5RdSM5hPvg6GnZtbvmUb2tRq3XmJakPczPj\"]},\"@chainlink/contracts/src/v0.6/VRFConsumerBase.sol\":{\"keccak256\":\"0xbb84a6411e071d5b04b36d7dda59eaf1cb5a28b3b289757a5ac849ddf9befac3\",\"urls\":[\"bzz-raw://6bc702d1ec269920a3f0cf371155b6c4800d36233949873144e95ce3c4427eb3\",\"dweb:/ipfs/QmUrYPpfh7TAcUBx3B5ugW2jCAeWThMssY5oyRgQXQRkbE\"]},\"@chainlink/contracts/src/v0.6/VRFRequestIDBase.sol\":{\"keccak256\":\"0x0c3bd40c63dac8398a979b1228c8ecb1c269c157dd16f2dce2086d2270b65b22\",\"urls\":[\"bzz-raw://ed9db87be9dfb0f763a556d8d80356b08282b8ea48484838cdf470a5c3cd15d5\",\"dweb:/ipfs/QmPLhwDAS3TPDiEQmTyqXnWBqwEMBSbXtjEiQDSGejoiPt\"]},\"@chainlink/contracts/src/v0.6/interfaces/LinkTokenInterface.sol\":{\"keccak256\":\"0xe245a7be950c94d87bb775ae9ee9fbd693fbe2987778e6ce0b04605ea44b7b68\",\"urls\":[\"bzz-raw://bd2c3165d949fc66fe407b96eb3dc2092c7e800f4c073b411bf7b96de3e156c9\",\"dweb:/ipfs/QmcfJhR1Np4GsLWnww2Duqks2wEzYk8VDTvCAYy7MisG1r\"]},\"@chainlink/contracts/src/v0.6/vendor/SafeMathChainlink.sol\":{\"keccak256\":\"0x105f5e9491f3d0bbdd4f1c7627eb839d69b944bfd803028a01cc083597692c1f\",\"urls\":[\"bzz-raw://ec45a2748a024a947a921183d4102d5e206808588501d85ddc4f5668a009bc73\",\"dweb:/ipfs/QmRNAMpq7LdWFnJ7wWKGbUuAcURaGSS42PMxtQ4vjrHmp9\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x15e2d5bd4c28a88548074c54d220e8086f638a71ed07e6b3ba5a70066fcf458d\",\"urls\":[\"bzz-raw://90faf5851c02f9bd42c5bfb54d4f0421a2612f50ab80b2c4fa24fa3792071cc2\",\"dweb:/ipfs/QmRGM4F2PcGVF85aTfaA9YBhCHHDqrMhRjyp6fGeBTtirb\"]},\"@openzeppelin/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0x24141d2f6b98d4cb77a8936eae8cbaad2e261d9062bdc08036096f4550092501\",\"urls\":[\"bzz-raw://b710eb003944777135f027500a5a57b479fe857849f5f467c1ef9687401e3c95\",\"dweb:/ipfs/QmcELzi6KRzAs3DXwxdsoKWRJ13KSeipKQsJgD3unctdZM\"]},\"@openzeppelin/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xf70bc25d981e4ec9673a995ad2995d5d493ea188d3d8f388bba9c227ce09fb82\",\"urls\":[\"bzz-raw://bd970f51e3a77790c2f02b5b1759827c3b897c3d98c407b3631e8af32e3dc93c\",\"dweb:/ipfs/QmPF85Amgbqjk3SNZKsPCsqCw8JfwYEPMnnhvMJUyX58je\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xcc78a17dd88fa5a2edc60c8489e2f405c0913b377216a5b26b35656b2d0dab52\",\"urls\":[\"bzz-raw://526dc85e1f9b9b45830e202568d267d93dde7a4fcccf4ad7798dadcd92304d3c\",\"dweb:/ipfs/QmaoXMB972J3cSDLtBq3xBo4jLwqD2uzXTwujtSPqkYVhR\"]},\"@openzeppelin/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0x118ed7540f56b21ff92e21ebaa73584048e98d2ac04ca67571329bb8dbd9032f\",\"urls\":[\"bzz-raw://da2918b7aff73dd51d41bfcfa548f81eb50531b8353500fdbdacf297076db070\",\"dweb:/ipfs/Qmb8ixAs1vBjZRowQNuNg6bRf2NZmgZ1JTBxmQS14PHpcL\"]},\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x2d99a0deb6648c34fbc66d6ac4a2d64798d7a5321b45624f6736fadc63da1962\",\"urls\":[\"bzz-raw://2dcdce5ede1e5e650d174ec0b35be7d47b6a50f30bc895ef0d9e59fb75052e45\",\"dweb:/ipfs/QmQ2XFsDLTYqfEdw7pYzHiGtFRY11yQm4b6ynYgKqDxeB8\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0xe6bd1b1218338b6f9fe17776f48623b4ac3d8a40405f74a44bc23c00abe2ca13\",\"urls\":[\"bzz-raw://0c354c3f6e9c487759aa7869be4fba68e0b2efc777b514d289c4cbd3ff8f7e1a\",\"dweb:/ipfs/QmdF9LcSYVmiUCL7JxLEYmSLrjga6zJsujfi6sgEJD4M1z\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0xccb917776f826ac6b68bd5a15a5f711e3967848a52ba11e6104d9a4f593314a7\",\"urls\":[\"bzz-raw://430255ad2229ced6d880e61a67bdc6e48dbbaed8354a7c1fe918cd8b8714a886\",\"dweb:/ipfs/QmTHY56odzqEpEC6v6tafaWMYY7vmULw25q5XHJLCCAeox\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0x52146049d6709c870e8ddcd988b5155cb6c5d640cfcd8978aee52bc1ba2ec4eb\",\"urls\":[\"bzz-raw://ada84513617b7c1b2f890b44503735abaec73a1acd030112a17aac7e6c66a4a1\",\"dweb:/ipfs/QmaiFwdio67iJrfjAdkMac24eJ5sS1qD7CZW6PhUU6KjiK\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x28911e614500ae7c607a432a709d35da25f3bc5ddc8bd12b278b66358070c0ea\",\"urls\":[\"bzz-raw://256c8c8af5eb072bc473226ab2b2187149b8fc04f5f4a4820db22527f5ce8e3c\",\"dweb:/ipfs/QmRvi5BhnL7Rxf85KrJhwM6RRhukm4tzoctRdgQEheNyiN\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"@openzeppelin/contracts/utils/EnumerableMap.sol\":{\"keccak256\":\"0x4b087f06b6670a131a5a14e53b1d2a5ef19c034cc5ec42eeebcf9554325744ad\",\"urls\":[\"bzz-raw://f6a6af5d848334e40db419773f6360601e311ffc21c2e274f730b8c542da99fd\",\"dweb:/ipfs/QmfA24cxQ2g41ZWUuDF295dxDJ4xF1bSDYtC3EaLd7CzW8\"]},\"@openzeppelin/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0x1562cd9922fbf739edfb979f506809e2743789cbde3177515542161c3d04b164\",\"urls\":[\"bzz-raw://4580d57781513d98870d9738c7d39094336e0a70cdb90d68dad549c6ced466ec\",\"dweb:/ipfs/Qmf9YZzzRFuvMnav9dgmeRUpdYMMECiZX8w25sHWVbA18V\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0xa1e12f97981f1d0964b1c048978606a57127c56c438bab61cdfe269cad859a74\",\"urls\":[\"bzz-raw://5eefac1760f524971e14aa3f3d79515a3d54fd28c1d3bdca0b36127da349b830\",\"dweb:/ipfs/QmUMzkyH3ytJX5gVPizQruNLhkKmuJb3nFqBDad4LPdg5U\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.6.0;\n\nimport \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\n\nimport \"@chainlink/contracts/src/v0.6/VRFConsumerBase.sol\";\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\nabstract contract PropertyNFT is ERC721, VRFConsumerBase, Ownable {\n\n    mapping(bytes32 => string) requestToName;\n    mapping(bytes32 => address) requestToSender;\n\n    struct Location {\n        uint256 latitude;\n        uint256 longitude;// TODO make these signed integers\n    }\n    enum AssetType {\n        TITLE,\n        OTHER\n    }\n    enum LeaseTerm{\n        T_12M,\n        T_24M,\n        T_6M\n    }\n    struct Lease {\n        string leaseeFirstName;\n        string leaseeLastName;\n        LeaseTerm leaseTerm;\n        Date startDateTimestamp;\n        Date endDateTimestamp;\n    }\n    struct Date {\n        uint256 month;\n        uint256 day;\n        uint256 year;\n    }\n\n}",
+  "source": "pragma solidity ^0.6.0;\n\nimport \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\n\nimport \"@chainlink/contracts/src/v0.6/VRFConsumerBase.sol\";\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\nabstract contract PropertyNFT is ERC721, VRFConsumerBase, Ownable {\n\n    mapping(bytes32 => string) requestToName;\n    mapping(bytes32 => address) requestToSender;\n    mapping(uint256 => address) public tokenIdToOwner;\n\n    struct Location {\n        uint256 latitude;\n        uint256 longitude;// TODO make these signed integers\n    }\n    enum AssetType {\n        TITLE,\n        OTHER\n    }\n    enum LeaseTerm{\n        T_12M,\n        T_24M,\n        T_6M\n    }\n    struct Lease {\n        string leaseeFirstName;\n        string leaseeLastName;\n        LeaseTerm leaseTerm;\n        Date startDateTimestamp;\n        Date endDateTimestamp;\n    }\n    struct Date {\n        uint256 month;\n        uint256 day;\n        uint256 year;\n    }\n\n}",
   "sourcePath": "/Users/lilian/Desktop/CryptoProj/RealEstateRoyalties/src/contracts/PropertyNFT.sol",
   "ast": {
     "absolutePath": "/Users/lilian/Desktop/CryptoProj/RealEstateRoyalties/src/contracts/PropertyNFT.sol",
     "exportedSymbols": {
       "PropertyNFT": [
-        49
+        53
       ]
     },
-    "id": 50,
+    "id": 54,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -505,8 +524,8 @@
         "file": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
         "id": 2,
         "nodeType": "ImportDirective",
-        "scope": 50,
-        "sourceUnit": 2300,
+        "scope": 54,
+        "sourceUnit": 2269,
         "src": "25:57:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -516,8 +535,8 @@
         "file": "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol",
         "id": 3,
         "nodeType": "ImportDirective",
-        "scope": 50,
-        "sourceUnit": 539,
+        "scope": 54,
+        "sourceUnit": 508,
         "src": "84:59:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -527,8 +546,8 @@
         "file": "@openzeppelin/contracts/access/Ownable.sol",
         "id": 4,
         "nodeType": "ImportDirective",
-        "scope": 50,
-        "sourceUnit": 933,
+        "scope": 54,
+        "sourceUnit": 902,
         "src": "144:52:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -543,10 +562,10 @@
               "id": 5,
               "name": "ERC721",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2299,
+              "referencedDeclaration": 2268,
               "src": "231:6:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721_$2299",
+                "typeIdentifier": "t_contract$_ERC721_$2268",
                 "typeString": "contract ERC721"
               }
             },
@@ -561,10 +580,10 @@
               "id": 7,
               "name": "VRFConsumerBase",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 538,
+              "referencedDeclaration": 507,
               "src": "239:15:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_VRFConsumerBase_$538",
+                "typeIdentifier": "t_contract$_VRFConsumerBase_$507",
                 "typeString": "contract VRFConsumerBase"
               }
             },
@@ -579,10 +598,10 @@
               "id": 9,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 932,
+              "referencedDeclaration": 901,
               "src": "256:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$932",
+                "typeIdentifier": "t_contract$_Ownable_$901",
                 "typeString": "contract Ownable"
               }
             },
@@ -592,33 +611,33 @@
           }
         ],
         "contractDependencies": [
-          538,
-          588,
-          932,
-          988,
-          1000,
-          2299,
+          507,
+          557,
+          901,
+          957,
+          969,
+          2268,
+          2384,
           2415,
-          2446,
-          2473,
-          2810
+          2442,
+          2779
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 49,
+        "id": 53,
         "linearizedBaseContracts": [
-          49,
-          932,
-          538,
-          588,
-          2299,
-          2446,
-          2473,
+          53,
+          901,
+          507,
+          557,
+          2268,
           2415,
-          988,
-          1000,
-          2810
+          2442,
+          2384,
+          957,
+          969,
+          2779
         ],
         "name": "PropertyNFT",
         "nodeType": "ContractDefinition",
@@ -630,7 +649,7 @@
             "name": "requestToName",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 49,
+            "scope": 53,
             "src": "271:40:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -677,7 +696,7 @@
             "name": "requestToSender",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 49,
+            "scope": 53,
             "src": "317:43:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -719,18 +738,67 @@
             "visibility": "internal"
           },
           {
+            "constant": false,
+            "functionSelector": "6e9e48ef",
+            "id": 22,
+            "mutability": "mutable",
+            "name": "tokenIdToOwner",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 53,
+            "src": "366:49:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+              "typeString": "mapping(uint256 => address)"
+            },
+            "typeName": {
+              "id": 21,
+              "keyType": {
+                "id": 19,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "374:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "366:27:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                "typeString": "mapping(uint256 => address)"
+              },
+              "valueType": {
+                "id": 20,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "385:7:0",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
             "canonicalName": "PropertyNFT.Location",
-            "id": 23,
+            "id": 27,
             "members": [
               {
                 "constant": false,
-                "id": 20,
+                "id": 24,
                 "mutability": "mutable",
                 "name": "latitude",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 23,
-                "src": "393:16:0",
+                "scope": 27,
+                "src": "448:16:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -738,10 +806,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 19,
+                  "id": 23,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "393:7:0",
+                  "src": "448:7:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -752,13 +820,13 @@
               },
               {
                 "constant": false,
-                "id": 22,
+                "id": 26,
                 "mutability": "mutable",
                 "name": "longitude",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 23,
-                "src": "419:17:0",
+                "scope": 27,
+                "src": "474:17:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -766,10 +834,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 21,
+                  "id": 25,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "419:7:0",
+                  "src": "474:7:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -781,143 +849,85 @@
             ],
             "name": "Location",
             "nodeType": "StructDefinition",
-            "scope": 49,
-            "src": "367:110:0",
+            "scope": 53,
+            "src": "422:110:0",
             "visibility": "public"
           },
           {
             "canonicalName": "PropertyNFT.AssetType",
-            "id": 26,
-            "members": [
-              {
-                "id": 24,
-                "name": "TITLE",
-                "nodeType": "EnumValue",
-                "src": "507:5:0"
-              },
-              {
-                "id": 25,
-                "name": "OTHER",
-                "nodeType": "EnumValue",
-                "src": "522:5:0"
-              }
-            ],
-            "name": "AssetType",
-            "nodeType": "EnumDefinition",
-            "src": "482:51:0"
-          },
-          {
-            "canonicalName": "PropertyNFT.LeaseTerm",
             "id": 30,
             "members": [
               {
-                "id": 27,
-                "name": "T_12M",
+                "id": 28,
+                "name": "TITLE",
                 "nodeType": "EnumValue",
                 "src": "562:5:0"
               },
               {
-                "id": 28,
-                "name": "T_24M",
+                "id": 29,
+                "name": "OTHER",
                 "nodeType": "EnumValue",
                 "src": "577:5:0"
+              }
+            ],
+            "name": "AssetType",
+            "nodeType": "EnumDefinition",
+            "src": "537:51:0"
+          },
+          {
+            "canonicalName": "PropertyNFT.LeaseTerm",
+            "id": 34,
+            "members": [
+              {
+                "id": 31,
+                "name": "T_12M",
+                "nodeType": "EnumValue",
+                "src": "617:5:0"
               },
               {
-                "id": 29,
+                "id": 32,
+                "name": "T_24M",
+                "nodeType": "EnumValue",
+                "src": "632:5:0"
+              },
+              {
+                "id": 33,
                 "name": "T_6M",
                 "nodeType": "EnumValue",
-                "src": "592:4:0"
+                "src": "647:4:0"
               }
             ],
             "name": "LeaseTerm",
             "nodeType": "EnumDefinition",
-            "src": "538:64:0"
+            "src": "593:64:0"
           },
           {
             "canonicalName": "PropertyNFT.Lease",
-            "id": 41,
+            "id": 45,
             "members": [
-              {
-                "constant": false,
-                "id": 32,
-                "mutability": "mutable",
-                "name": "leaseeFirstName",
-                "nodeType": "VariableDeclaration",
-                "overrides": null,
-                "scope": 41,
-                "src": "630:22:0",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
-                },
-                "typeName": {
-                  "id": 31,
-                  "name": "string",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "630:6:0",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_storage_ptr",
-                    "typeString": "string"
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
-              },
-              {
-                "constant": false,
-                "id": 34,
-                "mutability": "mutable",
-                "name": "leaseeLastName",
-                "nodeType": "VariableDeclaration",
-                "overrides": null,
-                "scope": 41,
-                "src": "662:21:0",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
-                },
-                "typeName": {
-                  "id": 33,
-                  "name": "string",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "662:6:0",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_storage_ptr",
-                    "typeString": "string"
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
-              },
               {
                 "constant": false,
                 "id": 36,
                 "mutability": "mutable",
-                "name": "leaseTerm",
+                "name": "leaseeFirstName",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 41,
-                "src": "693:19:0",
+                "scope": 45,
+                "src": "685:22:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_LeaseTerm_$30",
-                  "typeString": "enum PropertyNFT.LeaseTerm"
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
                 },
                 "typeName": {
-                  "contractScope": null,
                   "id": 35,
-                  "name": "LeaseTerm",
-                  "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 30,
-                  "src": "693:9:0",
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "685:6:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_LeaseTerm_$30",
-                    "typeString": "enum PropertyNFT.LeaseTerm"
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
                   }
                 },
                 "value": null,
@@ -927,27 +937,25 @@
                 "constant": false,
                 "id": 38,
                 "mutability": "mutable",
-                "name": "startDateTimestamp",
+                "name": "leaseeLastName",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 41,
-                "src": "722:23:0",
+                "scope": 45,
+                "src": "717:21:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Date_$48_storage_ptr",
-                  "typeString": "struct PropertyNFT.Date"
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
                 },
                 "typeName": {
-                  "contractScope": null,
                   "id": 37,
-                  "name": "Date",
-                  "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 48,
-                  "src": "722:4:0",
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "717:6:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Date_$48_storage_ptr",
-                    "typeString": "struct PropertyNFT.Date"
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
                   }
                 },
                 "value": null,
@@ -957,26 +965,86 @@
                 "constant": false,
                 "id": 40,
                 "mutability": "mutable",
-                "name": "endDateTimestamp",
+                "name": "leaseTerm",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 41,
-                "src": "755:21:0",
+                "scope": 45,
+                "src": "748:19:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Date_$48_storage_ptr",
-                  "typeString": "struct PropertyNFT.Date"
+                  "typeIdentifier": "t_enum$_LeaseTerm_$34",
+                  "typeString": "enum PropertyNFT.LeaseTerm"
                 },
                 "typeName": {
                   "contractScope": null,
                   "id": 39,
+                  "name": "LeaseTerm",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 34,
+                  "src": "748:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_LeaseTerm_$34",
+                    "typeString": "enum PropertyNFT.LeaseTerm"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 42,
+                "mutability": "mutable",
+                "name": "startDateTimestamp",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 45,
+                "src": "777:23:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Date_$52_storage_ptr",
+                  "typeString": "struct PropertyNFT.Date"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 41,
                   "name": "Date",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 48,
-                  "src": "755:4:0",
+                  "referencedDeclaration": 52,
+                  "src": "777:4:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Date_$48_storage_ptr",
+                    "typeIdentifier": "t_struct$_Date_$52_storage_ptr",
+                    "typeString": "struct PropertyNFT.Date"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 44,
+                "mutability": "mutable",
+                "name": "endDateTimestamp",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 45,
+                "src": "810:21:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Date_$52_storage_ptr",
+                  "typeString": "struct PropertyNFT.Date"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 43,
+                  "name": "Date",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 52,
+                  "src": "810:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Date_$52_storage_ptr",
                     "typeString": "struct PropertyNFT.Date"
                   }
                 },
@@ -986,79 +1054,23 @@
             ],
             "name": "Lease",
             "nodeType": "StructDefinition",
-            "scope": 49,
-            "src": "607:176:0",
+            "scope": 53,
+            "src": "662:176:0",
             "visibility": "public"
           },
           {
             "canonicalName": "PropertyNFT.Date",
-            "id": 48,
+            "id": 52,
             "members": [
-              {
-                "constant": false,
-                "id": 43,
-                "mutability": "mutable",
-                "name": "month",
-                "nodeType": "VariableDeclaration",
-                "overrides": null,
-                "scope": 48,
-                "src": "810:13:0",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
-                },
-                "typeName": {
-                  "id": 42,
-                  "name": "uint256",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "810:7:0",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
-              },
-              {
-                "constant": false,
-                "id": 45,
-                "mutability": "mutable",
-                "name": "day",
-                "nodeType": "VariableDeclaration",
-                "overrides": null,
-                "scope": 48,
-                "src": "833:11:0",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
-                },
-                "typeName": {
-                  "id": 44,
-                  "name": "uint256",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "833:7:0",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
-              },
               {
                 "constant": false,
                 "id": 47,
                 "mutability": "mutable",
-                "name": "year",
+                "name": "month",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 48,
-                "src": "854:12:0",
+                "scope": 52,
+                "src": "865:13:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1069,7 +1081,63 @@
                   "id": 46,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "854:7:0",
+                  "src": "865:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 49,
+                "mutability": "mutable",
+                "name": "day",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 52,
+                "src": "888:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 48,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "888:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51,
+                "mutability": "mutable",
+                "name": "year",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 52,
+                "src": "909:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 50,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "909:7:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -1081,23 +1149,23 @@
             ],
             "name": "Date",
             "nodeType": "StructDefinition",
-            "scope": 49,
-            "src": "788:85:0",
+            "scope": 53,
+            "src": "843:85:0",
             "visibility": "public"
           }
         ],
-        "scope": 50,
-        "src": "198:678:0"
+        "scope": 54,
+        "src": "198:733:0"
       }
     ],
-    "src": "0:876:0"
+    "src": "0:931:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/Users/lilian/Desktop/CryptoProj/RealEstateRoyalties/src/contracts/PropertyNFT.sol",
       "exportedSymbols": {
         "PropertyNFT": [
-          49
+          53
         ]
       }
     },
@@ -1117,10 +1185,10 @@
       },
       {
         "attributes": {
-          "SourceUnit": 2300,
+          "SourceUnit": 2269,
           "absolutePath": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
           "file": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
-          "scope": 50,
+          "scope": 54,
           "symbolAliases": [
             null
           ],
@@ -1132,10 +1200,10 @@
       },
       {
         "attributes": {
-          "SourceUnit": 539,
+          "SourceUnit": 508,
           "absolutePath": "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol",
           "file": "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol",
-          "scope": 50,
+          "scope": 54,
           "symbolAliases": [
             null
           ],
@@ -1147,10 +1215,10 @@
       },
       {
         "attributes": {
-          "SourceUnit": 933,
+          "SourceUnit": 902,
           "absolutePath": "@openzeppelin/contracts/access/Ownable.sol",
           "file": "@openzeppelin/contracts/access/Ownable.sol",
-          "scope": 50,
+          "scope": 54,
           "symbolAliases": [
             null
           ],
@@ -1164,35 +1232,35 @@
         "attributes": {
           "abstract": true,
           "contractDependencies": [
-            538,
-            588,
-            932,
-            988,
-            1000,
-            2299,
+            507,
+            557,
+            901,
+            957,
+            969,
+            2268,
+            2384,
             2415,
-            2446,
-            2473,
-            2810
+            2442,
+            2779
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            49,
-            932,
-            538,
-            588,
-            2299,
-            2446,
-            2473,
+            53,
+            901,
+            507,
+            557,
+            2268,
             2415,
-            988,
-            1000,
-            2810
+            2442,
+            2384,
+            957,
+            969,
+            2779
           ],
           "name": "PropertyNFT",
-          "scope": 50
+          "scope": 54
         },
         "children": [
           {
@@ -1204,7 +1272,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC721",
-                  "referencedDeclaration": 2299,
+                  "referencedDeclaration": 2268,
                   "type": "contract ERC721"
                 },
                 "id": 5,
@@ -1225,7 +1293,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "VRFConsumerBase",
-                  "referencedDeclaration": 538,
+                  "referencedDeclaration": 507,
                   "type": "contract VRFConsumerBase"
                 },
                 "id": 7,
@@ -1246,7 +1314,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "Ownable",
-                  "referencedDeclaration": 932,
+                  "referencedDeclaration": 901,
                   "type": "contract Ownable"
                 },
                 "id": 9,
@@ -1264,7 +1332,7 @@
               "mutability": "mutable",
               "name": "requestToName",
               "overrides": null,
-              "scope": 49,
+              "scope": 53,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(bytes32 => string)",
@@ -1311,7 +1379,7 @@
               "mutability": "mutable",
               "name": "requestToSender",
               "overrides": null,
-              "scope": 49,
+              "scope": 53,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(bytes32 => address)",
@@ -1355,24 +1423,22 @@
           },
           {
             "attributes": {
-              "canonicalName": "PropertyNFT.Location",
-              "name": "Location",
-              "scope": 49,
+              "constant": false,
+              "functionSelector": "6e9e48ef",
+              "mutability": "mutable",
+              "name": "tokenIdToOwner",
+              "overrides": null,
+              "scope": 53,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => address)",
+              "value": null,
               "visibility": "public"
             },
             "children": [
               {
                 "attributes": {
-                  "constant": false,
-                  "mutability": "mutable",
-                  "name": "latitude",
-                  "overrides": null,
-                  "scope": 23,
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "type": "uint256",
-                  "value": null,
-                  "visibility": "internal"
+                  "type": "mapping(uint256 => address)"
                 },
                 "children": [
                   {
@@ -1382,20 +1448,43 @@
                     },
                     "id": 19,
                     "name": "ElementaryTypeName",
-                    "src": "393:7:0"
+                    "src": "374:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 20,
+                    "name": "ElementaryTypeName",
+                    "src": "385:7:0"
                   }
                 ],
-                "id": 20,
-                "name": "VariableDeclaration",
-                "src": "393:16:0"
-              },
+                "id": 21,
+                "name": "Mapping",
+                "src": "366:27:0"
+              }
+            ],
+            "id": 22,
+            "name": "VariableDeclaration",
+            "src": "366:49:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "PropertyNFT.Location",
+              "name": "Location",
+              "scope": 53,
+              "visibility": "public"
+            },
+            "children": [
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
-                  "name": "longitude",
+                  "name": "latitude",
                   "overrides": null,
-                  "scope": 23,
+                  "scope": 27,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1408,19 +1497,47 @@
                       "name": "uint256",
                       "type": "uint256"
                     },
-                    "id": 21,
+                    "id": 23,
                     "name": "ElementaryTypeName",
-                    "src": "419:7:0"
+                    "src": "448:7:0"
                   }
                 ],
-                "id": 22,
+                "id": 24,
                 "name": "VariableDeclaration",
-                "src": "419:17:0"
+                "src": "448:16:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "longitude",
+                  "overrides": null,
+                  "scope": 27,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 25,
+                    "name": "ElementaryTypeName",
+                    "src": "474:7:0"
+                  }
+                ],
+                "id": 26,
+                "name": "VariableDeclaration",
+                "src": "474:17:0"
               }
             ],
-            "id": 23,
+            "id": 27,
             "name": "StructDefinition",
-            "src": "367:110:0"
+            "src": "422:110:0"
           },
           {
             "attributes": {
@@ -1432,22 +1549,22 @@
                 "attributes": {
                   "name": "TITLE"
                 },
-                "id": 24,
+                "id": 28,
                 "name": "EnumValue",
-                "src": "507:5:0"
+                "src": "562:5:0"
               },
               {
                 "attributes": {
                   "name": "OTHER"
                 },
-                "id": 25,
+                "id": 29,
                 "name": "EnumValue",
-                "src": "522:5:0"
+                "src": "577:5:0"
               }
             ],
-            "id": 26,
+            "id": 30,
             "name": "EnumDefinition",
-            "src": "482:51:0"
+            "src": "537:51:0"
           },
           {
             "attributes": {
@@ -1459,36 +1576,36 @@
                 "attributes": {
                   "name": "T_12M"
                 },
-                "id": 27,
+                "id": 31,
                 "name": "EnumValue",
-                "src": "562:5:0"
+                "src": "617:5:0"
               },
               {
                 "attributes": {
                   "name": "T_24M"
                 },
-                "id": 28,
+                "id": 32,
                 "name": "EnumValue",
-                "src": "577:5:0"
+                "src": "632:5:0"
               },
               {
                 "attributes": {
                   "name": "T_6M"
                 },
-                "id": 29,
+                "id": 33,
                 "name": "EnumValue",
-                "src": "592:4:0"
+                "src": "647:4:0"
               }
             ],
-            "id": 30,
+            "id": 34,
             "name": "EnumDefinition",
-            "src": "538:64:0"
+            "src": "593:64:0"
           },
           {
             "attributes": {
               "canonicalName": "PropertyNFT.Lease",
               "name": "Lease",
-              "scope": 49,
+              "scope": 53,
               "visibility": "public"
             },
             "children": [
@@ -1498,7 +1615,7 @@
                   "mutability": "mutable",
                   "name": "leaseeFirstName",
                   "overrides": null,
-                  "scope": 41,
+                  "scope": 45,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1511,14 +1628,14 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 31,
+                    "id": 35,
                     "name": "ElementaryTypeName",
-                    "src": "630:6:0"
+                    "src": "685:6:0"
                   }
                 ],
-                "id": 32,
+                "id": 36,
                 "name": "VariableDeclaration",
-                "src": "630:22:0"
+                "src": "685:22:0"
               },
               {
                 "attributes": {
@@ -1526,7 +1643,7 @@
                   "mutability": "mutable",
                   "name": "leaseeLastName",
                   "overrides": null,
-                  "scope": 41,
+                  "scope": 45,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1539,14 +1656,14 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 33,
+                    "id": 37,
                     "name": "ElementaryTypeName",
-                    "src": "662:6:0"
+                    "src": "717:6:0"
                   }
                 ],
-                "id": 34,
+                "id": 38,
                 "name": "VariableDeclaration",
-                "src": "662:21:0"
+                "src": "717:21:0"
               },
               {
                 "attributes": {
@@ -1554,7 +1671,7 @@
                   "mutability": "mutable",
                   "name": "leaseTerm",
                   "overrides": null,
-                  "scope": 41,
+                  "scope": 45,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "enum PropertyNFT.LeaseTerm",
@@ -1566,17 +1683,17 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "LeaseTerm",
-                      "referencedDeclaration": 30,
+                      "referencedDeclaration": 34,
                       "type": "enum PropertyNFT.LeaseTerm"
                     },
-                    "id": 35,
+                    "id": 39,
                     "name": "UserDefinedTypeName",
-                    "src": "693:9:0"
+                    "src": "748:9:0"
                   }
                 ],
-                "id": 36,
+                "id": 40,
                 "name": "VariableDeclaration",
-                "src": "693:19:0"
+                "src": "748:19:0"
               },
               {
                 "attributes": {
@@ -1584,7 +1701,7 @@
                   "mutability": "mutable",
                   "name": "startDateTimestamp",
                   "overrides": null,
-                  "scope": 41,
+                  "scope": 45,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "struct PropertyNFT.Date",
@@ -1596,17 +1713,17 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "Date",
-                      "referencedDeclaration": 48,
+                      "referencedDeclaration": 52,
                       "type": "struct PropertyNFT.Date"
                     },
-                    "id": 37,
+                    "id": 41,
                     "name": "UserDefinedTypeName",
-                    "src": "722:4:0"
+                    "src": "777:4:0"
                   }
                 ],
-                "id": 38,
+                "id": 42,
                 "name": "VariableDeclaration",
-                "src": "722:23:0"
+                "src": "777:23:0"
               },
               {
                 "attributes": {
@@ -1614,7 +1731,7 @@
                   "mutability": "mutable",
                   "name": "endDateTimestamp",
                   "overrides": null,
-                  "scope": 41,
+                  "scope": 45,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "struct PropertyNFT.Date",
@@ -1626,28 +1743,28 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "Date",
-                      "referencedDeclaration": 48,
+                      "referencedDeclaration": 52,
                       "type": "struct PropertyNFT.Date"
                     },
-                    "id": 39,
+                    "id": 43,
                     "name": "UserDefinedTypeName",
-                    "src": "755:4:0"
+                    "src": "810:4:0"
                   }
                 ],
-                "id": 40,
+                "id": 44,
                 "name": "VariableDeclaration",
-                "src": "755:21:0"
+                "src": "810:21:0"
               }
             ],
-            "id": 41,
+            "id": 45,
             "name": "StructDefinition",
-            "src": "607:176:0"
+            "src": "662:176:0"
           },
           {
             "attributes": {
               "canonicalName": "PropertyNFT.Date",
               "name": "Date",
-              "scope": 49,
+              "scope": 53,
               "visibility": "public"
             },
             "children": [
@@ -1657,63 +1774,7 @@
                   "mutability": "mutable",
                   "name": "month",
                   "overrides": null,
-                  "scope": 48,
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "type": "uint256",
-                  "value": null,
-                  "visibility": "internal"
-                },
-                "children": [
-                  {
-                    "attributes": {
-                      "name": "uint256",
-                      "type": "uint256"
-                    },
-                    "id": 42,
-                    "name": "ElementaryTypeName",
-                    "src": "810:7:0"
-                  }
-                ],
-                "id": 43,
-                "name": "VariableDeclaration",
-                "src": "810:13:0"
-              },
-              {
-                "attributes": {
-                  "constant": false,
-                  "mutability": "mutable",
-                  "name": "day",
-                  "overrides": null,
-                  "scope": 48,
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "type": "uint256",
-                  "value": null,
-                  "visibility": "internal"
-                },
-                "children": [
-                  {
-                    "attributes": {
-                      "name": "uint256",
-                      "type": "uint256"
-                    },
-                    "id": 44,
-                    "name": "ElementaryTypeName",
-                    "src": "833:7:0"
-                  }
-                ],
-                "id": 45,
-                "name": "VariableDeclaration",
-                "src": "833:11:0"
-              },
-              {
-                "attributes": {
-                  "constant": false,
-                  "mutability": "mutable",
-                  "name": "year",
-                  "overrides": null,
-                  "scope": 48,
+                  "scope": 52,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1728,27 +1789,83 @@
                     },
                     "id": 46,
                     "name": "ElementaryTypeName",
-                    "src": "854:7:0"
+                    "src": "865:7:0"
                   }
                 ],
                 "id": 47,
                 "name": "VariableDeclaration",
-                "src": "854:12:0"
+                "src": "865:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "day",
+                  "overrides": null,
+                  "scope": 52,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 48,
+                    "name": "ElementaryTypeName",
+                    "src": "888:7:0"
+                  }
+                ],
+                "id": 49,
+                "name": "VariableDeclaration",
+                "src": "888:11:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "year",
+                  "overrides": null,
+                  "scope": 52,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 50,
+                    "name": "ElementaryTypeName",
+                    "src": "909:7:0"
+                  }
+                ],
+                "id": 51,
+                "name": "VariableDeclaration",
+                "src": "909:12:0"
               }
             ],
-            "id": 48,
+            "id": 52,
             "name": "StructDefinition",
-            "src": "788:85:0"
+            "src": "843:85:0"
           }
         ],
-        "id": 49,
+        "id": 53,
         "name": "ContractDefinition",
-        "src": "198:678:0"
+        "src": "198:733:0"
       }
     ],
-    "id": 50,
+    "id": 54,
     "name": "SourceUnit",
-    "src": "0:876:0"
+    "src": "0:931:0"
   },
   "compiler": {
     "name": "solc",
@@ -1756,7 +1873,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-10T20:04:11.507Z",
+  "updatedAt": "2021-04-11T00:54:03.693Z",
   "devdoc": {
     "methods": {
       "approve(address,uint256)": {

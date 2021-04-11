@@ -26,21 +26,22 @@ module.exports = async callback => {
 
 //        let property = await deployedNFTitle.properties[index]
 
-        let property = deployedNFTitle.getPropertyMetadata[0];
+        let property = await deployedNFTitle.getPropertyMetadata(0);
         console.log('propertytyyt', property);
         index++
-        nfTitleMetadata['name'] = property['name']
+        nfTitleMetadata['name'] = property[0];
+        nfTitleMetadata['description']= property[1];
         if (fs.existsSync('metadata/' + nfTitleMetadata['name'].toLowerCase().replace(/\s/g, '-') + '.json')) {
             console.log('test')
             continue
         }
         console.log(nfTitleMetadata['name'])
-        nfTitleMetadata['attributes'][0]['value'] = nfTitle['landDescription']['words'][0]
-        nfTitleMetadata['attributes'][1]['value'] = nfTitle['propertyAddress']['words'][0]
+        nfTitleMetadata['attributes'][0]['value'] = property[1]
+        nfTitleMetadata['attributes'][1]['value'] = property[2]
 
-        filename = 'metadata/' + nfTitleMetadata['name'].toLowerCase().replace(/\s/g, '-')
+        filename = 'src/metadata/' + nfTitleMetadata['name'].toLowerCase().replace(/\s/g, '-')
         let data = JSON.stringify(nfTitleMetadata)
         fs.writeFileSync(filename + '.json', data)
     }
-    callback(nfTitle)
+    callback(deployedNFTitle)
 }

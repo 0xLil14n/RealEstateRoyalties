@@ -24,5 +24,8 @@ truffle migrate --reset --network rinkeby -f 2
 Verify contract on etherscan:
 truffle run verify RealEstateNFT --network rinkeby --license MIT
 
+create-metadata:
+truffle exec scripts/create-metadata.js --network rinkeby
+
 START APP:
 npm run start
